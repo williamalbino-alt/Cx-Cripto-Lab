@@ -8,9 +8,9 @@ Plataforma de capacitación especializada en blockchain, criptomonedas y Web3 pa
 
 ## � Acceso Rápido
 
-**[🔗 Visita la Plataforma en Vivo](https://cxcriptolab.netlify.app/)**
+**[🔗 Visita la Plataforma en Vivo](https://cxcriptolab.netlify.app/){target="_blank"}**
 
-Accede directamente a CX Crypto Lab y comienza tu capacitación en blockchain y criptomonedas.
+Accede directamente a CX Crypto Lab y comienza tu capacitación en blockchain y criptomonedas. El link se abre en una nueva pestaña.
 
 ## �🎯 Objetivos Principales
 
