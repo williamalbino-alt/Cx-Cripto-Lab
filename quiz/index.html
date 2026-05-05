@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Criptomonedas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="container">
+        <!-- Tela Inicial -->
+        <div id="start-screen" class="screen active">
+            <h1 class="title">Quiz de Criptomonedas</h1>
+            <p class="description">Bienvenido al laboratorio de conocimientos cripto de Cx Cripto Lab</p>
+            <p class="description">Demuestra tu experiencia en el mundo de las criptomonedas con nuestro desafiante quiz de 30 preguntas.</p>
+            <button id="start-button" class="button">¡Comenzar el Desafío!</button>
+        </div>
+
+        <!-- Tela de Jogo -->
+        <div id="game-screen" class="screen hidden">
+            <button id="close-button" class="close-btn" title="Cerrar quiz">
+                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="game-header">
+                <div class="score-box glass-morphism">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span id="score">0 pts</span>
+                </div>
+                <h2 id="level-title" class="level-title">Nivel: Fácil</h2>
+                <div class="timer-box glass-morphism">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span id="timer">20s</span>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-label">Progreso del nivel: <span id="level-progress-text">1/10</span></div>
+                <div class="bar"><div id="level-progress-bar" class="fill"></div></div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-label">Progreso total: <span id="overall-progress-text">1/30</span></div>
+                <div class="bar"><div id="overall-progress-bar" class="fill"></div></div>
+            </div>
+            <div class="question-box glass-morphism">
+                <h3>Pregunta <span id="question-number">1</span></h3>
+                <p id="question-text"></p>
+            </div>
+            <div id="options" class="options"></div>
+            <div id="feedback" class="feedback" style="display: none;"></div>
+            <div class="timer-bar"><div id="timer-bar" class="timer-fill"></div></div>
+        </div>
+
+        <!-- Tela de Nível Completo -->
+        <div id="level-complete-screen" class="screen glass-morphism" style="display: none;">
+            <svg class="icon-large" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <h2 class="title">¡Nivel Completado!</h2>
+            <p>Has completado el nivel <span id="completed-level"></span></p>
+            <p>Puntuación actual: <span id="current-score"></span> / <span id="total-level-questions"></span></p>
+            <button id="next-level-button" class="button">Siguiente Nivel</button>
+        </div>
+
+        <!-- Tela de Jogo Completo -->
+        <div id="game-complete-screen" class="screen glass-morphism" style="display: none;">
+            <svg class="icon-large" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <h2 class="title">¡Felicidades!</h2>
+            <p>Has completado el Quiz de Criptomonedas</p>
+            <p>Puntuación final: <span id="final-score"></span> / 30</p>
+            <p id="final-message"></p>
+            <button id="reset-game-button" class="button">Volver al Inicio</button>
+        </div>
+    </div>
+    <script src="questions.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

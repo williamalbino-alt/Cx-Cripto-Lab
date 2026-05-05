@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/universal.css" />
+    <link rel="stylesheet" href="styles/colors.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <title>Quiz Interativo - CX Crypto Lab</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script>
+      (function () {
+        if (localStorage.getItem("theme") === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body class="light">
+    <!-- Header -->
+    <header>
+        <nav style="position: fixed; top: 0; width: 100%;">
+          <div class="nav-bar">
+            <li class="logo">
+                <a href="index.html">
+                <img id="topLogo" src="images/logo.webp" alt="CX Crypto Lab Logo" />
+              </a>
+            </li>
+  
+            <div class="icon-theme-container">
+              <img src="images/moon.png" alt="Modo Escuro" class="icon-theme" id="theme-icon" />
+            </div>
+  
+            <div style="display: flex;">
+              <input type="checkbox" id="check" />
+              <span class="menu font-sans">
+                <li>
+                  <a class="text-white" href="https://drive.google.com/drive/folders/0AGa2Eb7GjLLiUk9PVA?hl=es" target="_blank" rel="noopener noreferrer">Encuentros</a>
+                </li>
+                <li>
+                  <a class="text-white" href="preguntas.html" rel="noopener noreferrer">Preguntas</a>
+                </li>
+                <li>
+                  <a class="text-white" href="cuestionario.html" rel="noopener noreferrer">Cuestionario</a>
+                </li>
+                <li>
+                  <a href="noticias.html"><button class="btn-design text-bold">Novedades</button></a>
+                </li>
+                <label for="check" class="close-menu">
+                  <i class="text-white fas fa-times"></i>
+                </label>
+              </span>
+            </div>
+  
+            <label for="check" class="open-menu">
+              <i class="text-white fas fa-bars"></i>
+            </label>
+          </div>
+        </nav>
+      </header>
+
+    <!-- Seção do Quiz -->
+    <main>
+      <section class="quiz-section">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd6MTmPB0fZwMSSIoJi_8zRRGPAZxcCtmln_ki1myesKUPfZg/viewform?embedded=true" width="640" height="1830" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="super-container font-poppin">
+        <div class="components-outer-container">
+          <div class="footer-container">
+            <div class="first">
+              <div class="top">
+                <img id="footerLogo" src="images/logo.webp" alt="Footer Logo">
+              </div>
+              <div class="bottom">
+                <p class="text-white">
+                  CX Crypto Lab es una plataforma creada para capacitar al equipo de CX en blockchain,
+                  criptomonedas, Web3 y el universo cripto en general,
+                  potenciando su conocimiento para ofrecer un soporte más especializado y eficiente.
+                </p>
+              </div>
+            </div>
+            <div class="third">
+              <div class="top">
+                <p class="text-white">Creado con ❤️ por William</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/10/21/19/20241021190125-9JVJJLMU.js"></script>
+  </body>
+</html>

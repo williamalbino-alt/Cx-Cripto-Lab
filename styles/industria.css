@@ -1,0 +1,366 @@
+/* Introdução ao glossário */
+.glossary-intro {
+    padding: 140px 10% 60px;
+    text-align: center;
+  }
+  
+  .glossary-title {
+    font-size: 2.8rem;
+    background: linear-gradient(90deg, #552194, #854ad3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+  }
+  
+  .glossary-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Filtros */
+  .filter-buttons {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .filter-btn {
+    background: #f0f0f0;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .filter-btn.active,
+  .filter-btn:hover {
+    background: #552194;
+    color: #fff;
+  }
+  
+  /* Grade de cards */
+  .glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 10%;
+  }
+  
+  /* Cards com flip animation */
+  .glossary-card {
+    width: 100%; /* Ocupa 100% do espaço do grid cell */
+    max-width: 320px; /* Largura máxima */
+    height: 220px; /* Altura ajustada proporcionalmente */
+    perspective: 1000px;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0; /* Remove a margem fixa */
+  }
+.glossary-card:hover {
+  transform: translateY(-10px); /* Levanta o card ao passar o mouse */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+/* Ajustes específicos para MacBook M1 e menores */
+@media (max-width: 1440px) {
+  .glossary-grid {
+    gap: 1.5rem;
+    padding: 0 5%;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .glossary-card {
+    width: 100%;
+    max-width: 280px;
+    height: 190px;
+    margin: 10px;
+  }
+
+  .card-front h2 {
+    font-size: 1.3rem;
+    padding: 0 10px;
+  }
+
+  .card-back p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  .card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+/* Ajuste adicional para telas muito pequenas (mobile) */
+@media (max-width: 768px) {
+  .glossary-grid {
+    grid-template-columns: 1fr;
+    padding: 0 5%;
+  }
+
+  .glossary-card {
+    max-width: 100%;
+    height: 160px;
+  }
+}
+  
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s; /* Animação do flip */
+  transform-style: preserve-3d;
+}
+  
+  .glossary-card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    backface-visibility: hidden; /* Esconde o verso quando não visível */
+    border-radius: 15px; /* Bordas arredondadas nos lados */
+    font-family: 'Poppins', sans-serif; /* Fonte moderna */
+}
+  
+  .card-front {
+    background: #fff;
+    color: #333;
+  }
+  
+  .card-back {
+    background: #552194;
+    color: #fff;
+    transform: rotateY(180deg);
+    overflow-y: auto; /* Barra de rolagem vertical se o texto for longo */
+}
+  
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #552194;
+  }
+  .card-back p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+  
+  /* Seção de infográficos */
+  .infographics-section {
+    margin: 4rem 10%;
+    text-align: center;
+  }
+  
+  .infographics-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .infographics-section a {
+    color: #552194;
+    text-decoration: none;
+  }
+  
+  .infographics-section a:hover {
+    text-decoration: underline;
+  }
+  /* Novo CSS para accordion e elementos interativos */
+.featured-concepts {
+    padding: 4rem 10%;
+  }
+  
+  .accordion-item {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .accordion-header {
+    width: 100%;
+    padding: 1.5rem;
+    text-align: left;
+    background: #f8f9fa;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .accordion-header:hover {
+    background: #e9ecef;
+  }
+  
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: white;
+    padding: 0 1.5rem;
+  }
+  
+  .accordion-item.active .accordion-content {
+    max-height: 1000px;
+    padding: 1.5rem;
+  }
+  
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-top: 1rem;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+  
+  .interactive-diagram {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    gap: 1rem;
+  }
+  
+  .diagram-step {
+    flex: 1;
+    background: #f1e7ff;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .arrow {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #854ad3;
+  }
+  /* Adicione ao CSS existente */
+.glossary-card[data-category="blockchain"] .card-front {
+    background: #f1e7ff;
+  }
+  
+  .glossary-card[data-category="tokens"] .card-front {
+    background: #e7f3ff;
+  }
+  
+  .glossary-card[data-category="seguridad"] .card-front {
+    background: #ffe7e7;
+  }
+  
+  .glossary-card[data-category="web3"] .card-front {
+    background: #e7ffe8;
+  }
+  /* Adicione estas variáveis no :root */
+:root {
+    --accordion-header-bg: #f8f9fa;
+    --accordion-content-bg: white;
+    --diagram-step-bg: #f1e7ff;
+  }
+  
+  .dark {
+    --accordion-header-bg: #2d2d2d;
+    --accordion-content-bg: #1a1a1a;
+    --diagram-step-bg: #352545;
+  }
+  
+  /* Modifique as classes existentes */
+  .accordion-header {
+    background: var(--accordion-header-bg);
+    color: var(--text-color);
+  }
+  
+  .accordion-content {
+    background: var(--accordion-content-bg);
+  }
+  
+  .diagram-step {
+    background: var(--diagram-step-bg);
+  }
+  /* Tabela comparativa */
+.comparison-table {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  th {
+    background-color: var(--accordion-header-bg);
+  }
+  
+  /* Simulador de seguridad */
+  .security-checklist {
+    padding: 1rem;
+    border-radius: 8px;
+    background: var(--accordion-header-bg);
+  }
+  
+  .check-item {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .simulate-hack {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .hack-result {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    background: #ffcccc;
+    color: #721c24;
+    display: none; /* Oculto por padrão */
+}
+  
+  .hack-result.visible {
+    display: block;
+    background: #ffcccc;
+    color: #721c24;
+  }

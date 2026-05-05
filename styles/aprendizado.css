@@ -1,0 +1,430 @@
+/* styles/aprendizado.css */
+/* Estilos Gerais */
+.video-platform {
+    padding: 190px 5% 40px; /* Aumentei de 80px para 100px no topo */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.course-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 20px; /* Adiciona espaço acima do título e subtítulo */
+}
+
+.news-title {
+    background: linear-gradient(90deg, #552194, #854ad3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.4rem;
+    margin: 1rem auto 1.5rem !important;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+    width: fit-content;
+    padding-top: 20px;
+}
+.video-wrapper iframe {
+    position: absolute; /* Posiciona o iframe absolutamente dentro do wrapper */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.course-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2rem;
+}
+
+/* Layout Principal */
+.video-modules-container {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Player de Vídeo Modernizado */
+.video-player-container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    background: #000;
+    border-radius: 16px 16px 0 0;
+}
+
+/* Controles de Navegação */
+.video-controls {
+    padding: 1.5rem;
+    background: #F8FAFF;
+}
+
+.progress-container {
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+    height: 6px;
+    background: #EDF2F7;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #6C4DF6 0%, #854ad3 100%);
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    display: block;
+    text-align: center;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #718096;
+    font-weight: 500;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.nav-btn {
+    flex: 1;
+    padding: 14px 24px;
+    background: linear-gradient(90deg, #6C4DF6 0%, #854ad3 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.nav-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Lista de Módulos Modernizada */
+.modules-sidebar {
+    max-height: 500px; /* Ajuste a altura máxima conforme o design */
+    overflow-y: auto; /* Ativa o scroll vertical dentro do container */
+    padding-right: 10px; /* Espaço para a barra de scroll */
+    min-width: 300px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    padding: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+.module-videos {
+    overflow-y: auto;
+    padding-right: 10px; /* Espaço fixo para a barra de scroll */
+}
+.modules-sidebar::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de scroll */
+}
+
+.modules-sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor do fundo da barra */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.modules-sidebar::-webkit-scrollbar-thumb {
+    background: #888; /* Cor da barra de scroll */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.modules-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor ao passar o mouse */
+}
+
+.modules-header {
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.modules-header h2 {
+    font-size: 1.3rem;
+    color: #2A146B;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.course-stats {
+    display: flex;
+    gap: 1rem;
+    color: #718096;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Módulos e Vídeos Redesign */
+.module-card {
+    width: 100%; /* Ocupa toda a largura disponível */
+    min-width: 100px; /* Evita que os cards fiquem muito estreitos */
+    padding: 10px;
+    background: #F8FAFF;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(108,77,246,0.1);
+}
+.module-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(108,77,246,0.1);
+}
+
+.module-card.active {
+    background: linear-gradient(135deg, #6C4DF6 0%, #854ad3 100%);
+    color: white;
+    border-color: transparent;
+}
+
+.module-header {
+    padding: 12px;
+    margin: -12px -12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.module-header h3 {
+    white-space: normal; /* Permite que o texto quebre em várias linhas */
+    overflow: visible; /* Evita que o texto seja cortado */
+    text-overflow: initial; /* Remove os "..." */
+    font-size: 1.1rem; /* Ajuste o tamanho da fonte, se necessário */
+    line-height: 1.4; /* Espaçamento entre linhas para legibilidade */
+}
+
+.module-toggle {
+    background: transparent !important; /* Remove fundo */
+    border: none !important; /* Remove borda */
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.module-card.active .module-toggle {
+    background: rgba(255,255,255,0.2);
+}
+
+.module-card p {
+    font-size: 0.875rem;
+    color: #718096;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.module-card.active p {
+    color: rgba(255,255,255,0.9);
+}
+
+.video-item {
+    font-family: 'Poppins', sans-serif; /* Fonte elegante, ajuste se já usa outra */
+    text-transform: capitalize; /* Primeira letra maiúscula */
+    font-weight: 500; /* Peso médio para destaque */
+    font-size: 0.9rem; /* Tamanho legível */
+    color: #333; /* Cor no modo claro */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 0.25rem 0;
+    transition: all 0.2s ease;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+.video-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: #6C4DF6;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.video-item:hover::before {
+    opacity: 1;
+}
+.video-item:hover {
+    background: #F8FAFF;
+    transform: translateX(4px);
+}
+
+.video-item.active {
+    background: linear-gradient(90deg, #6C4DF6 0%, #854ad3 100%);
+    color: white;
+    border-color: transparent;
+}
+
+.video-item i {
+    margin-right: 12px;
+    font-size: 1.1rem;
+    color: #6C4DF6;
+}
+
+.video-item.active i {
+    color: white;
+}
+
+.video-duration {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: #718096;
+    font-weight: 500;
+}
+
+.video-item.active .video-duration {
+    color: rgba(255,255,255,0.8);
+}
+.module-card,
+.video-item {
+    max-width: 300px; /* Define um tamanho fixo para os cards */
+    width: 100%; /* Garante que ocupem o espaço disponível até o limite */
+    box-sizing: border-box; /* Inclui padding e bordas na largura */
+}
+
+/* Modo Claro */
+body.light .video-player-container,
+body.light .modules-sidebar,
+body.light .module-card,
+body.light .video-item {
+    background: #fff;
+    color: #333;
+}
+
+
+body.light .module-card.active {
+    background: linear-gradient(135deg, #6C4DF6 0%, #854ad3 100%);
+    color: white;
+}
+
+body.light .video-item.active {
+    background: linear-gradient(90deg, #6C4DF6 0%, #854ad3 100%);
+    color: white;
+}
+
+body.light .progress-bar {
+    background: #EDF2F7;
+}
+
+body.light .progress-fill {
+    background: linear-gradient(90deg, #6C4DF6 0%, #854ad3 100%);
+}
+
+body.light .nav-btn {
+    background: linear-gradient(90deg, #6C4DF6 0%, #854ad3 100%);
+    color: white;
+}
+
+/* Modo Escuro */
+body.dark .video-player-container,
+body.dark .modules-sidebar,
+body.dark .module-card,
+body.dark .video-item {
+    background: #1F2525; /* Cinza escuro suave */
+    color: #D8D8D8; /* Texto claro e legível */
+    border-color: rgba(255,255,255,0.15);
+}
+
+body.dark .video-controls {
+    background: #2C3232; /* Cinza um pouco mais claro para contraste */
+}
+
+body.dark .progress-bar {
+    background: #3A4040; /* Cinza médio para a barra */
+}
+
+body.dark .progress-fill {
+    background: linear-gradient(90deg, #5C4DB1 0%, #7A5FD9 100%); /* Roxo suave */
+}
+
+body.dark .nav-btn {
+    background: linear-gradient(90deg, #5C4DB1 0%, #7A5FD9 100%);
+    color: white;
+}
+
+body.dark .progress-text {
+    color: #A0A8A8; /* Cinza claro para texto secundário */
+}
+
+body.dark .module-card.active,
+body.dark .video-item.active {
+    background: linear-gradient(135deg, #5C4DB1 0%, #7A5FD9 100%);
+    color: white;
+}
+
+body.dark .course-title {
+    color: #B0A2F2; /* Roxo claro para títulos */
+}
+
+body.dark .module-header h3,
+body.dark .video-item {
+    color: #D8D8D8;
+}
+
+body.dark .video-duration {
+    color: #A0A8A8;
+}
+body.dark .modules-header h2 {
+    color: #728097; /* Branco */
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .video-modules-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .course-title {
+        font-size: 2rem;
+    }
+    
+    .nav-btn {
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .modules-sidebar {
+        position: sticky;
+        top: 120px;
+        max-height: calc(100vh - 160px);
+        overflow-y: auto;
+    }
+}

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles/universal.css" />
+  <link rel="stylesheet" href="styles/colors.css" />
+  <link rel="stylesheet" href="styles/navbar.css" />
+  <link rel="stylesheet" href="styles/footer.css" />
+  <link rel="stylesheet" href="styles/defi.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Mundo del DeFi - CX Crypto Lab</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/seu-codigo.js" crossorigin="anonymous"></script>
+  <script>
+    (function () {
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    })();
+  </script>
+</head>
+<body class="light">
+  <header>
+    <nav style="position: fixed; top: 0; width: 100%;">
+      <div class="nav-bar">
+        <li class="logo">
+          <a href="index.html">
+            <img id="topLogo" src="images/logo.webp" alt="CX Crypto Lab Logo" />
+          </a>
+        </li>
+
+        <div class="icon-theme-container">
+          <img src="images/moon.png" alt="Modo Escuro" class="icon-theme" id="theme-icon" />
+        </div>
+
+        <div style="display: flex;">
+          <input type="checkbox" id="check" />
+          <span class="menu font-sans">
+            <li>
+              <a class="text-white" href="https://drive.google.com/drive/folders/0AGa2Eb7GjLLiUk9PVA?hl=es" target="_blank" rel="noopener noreferrer">Encuentros</a>
+            </li>
+            <li>
+              <a class="text-white" href="preguntas.html" rel="noopener noreferrer">Preguntas</a>
+            </li>
+            <li>
+              <a class="text-white" href="cuestionario.html" rel="noopener noreferrer">Cuestionario</a>
+            </li>
+            <li>
+              <a href="noticias.html"><button class="btn-design text-bold">Novedades</button></a>
+            </li>
+            <label for="check" class="close-menu">
+              <i class="text-white fas fa-times"></i>
+            </label>
+          </span>
+        </div>
+
+        <label for="check" class="open-menu">
+          <i class="text-white fas fa-bars"></i>
+        </label>
+      </div>
+    </nav>
+  </header>
+  <div class="whycm-container text-center">
+    <div>
+      <h1 class="advantage-title title font-sans margin-0 gradient-text">
+        Finanzas Descentralizadas
+      </h1>
+      <p class="advantage-desc font-poppin margin-0">
+        Revolucionando el sistema financiero tradicional
+      </p>
+    </div>
+
+    <section class="content-section">
+      <div class="defi-intro">
+        <h2>¿Qué es DeFi?</h2>
+        <div class="defi-card">
+          <p class="intro-text">Imagina un sistema financiero donde tú tienes el control total, como manejar dinero entre amigos pero con seguridad digital. ¡Eso es DeFi!</p>
+          
+          <ul class="defi-list">
+            
+            <!-- Qué es DeFi -->
+            <div class="defi-accordion-item">
+              <div class="defi-toggle">
+                <i class="fas fa-unlock"></i>
+                ¿Qué es DeFi exactamente?
+                <i class="fas fa-chevron-down arrow-icon"></i>
+              </div>
+              <div class="defi-content">
+                <div class="simple-analogy">
+                  <p>🏦 <strong>Banca Tradicional vs DeFi:</strong></p>
+                  <div class="comparison">
+                    <div class="traditional">
+                      <p>❌ Necesitas un banco</p>
+                      <p>❌ Horarios limitados</p>
+                      <p>❌ Comisiones ocultas</p>
+                    </div>
+                    <div class="defi-comp">
+                      <p>✅ Acceso 24/7 desde tu teléfono</p>
+                      <p>✅ Sin pedir permiso</p>
+                      <p>✅ Transparente como el vidrio</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="example">💡 <em>Ejemplo:</em> Es como tener una cuenta de ahorros que gana intereses en tu app de mensajes, sin papeleos.</p>
+              </div>
+            </div>
+    
+            <!-- Cómo funciona -->
+            <div class="defi-accordion-item">
+              <div class="defi-toggle">
+                <i class="fas fa-coins"></i>
+                ¿Cómo funciona DeFi?
+                <i class="fas fa-chevron-down arrow-icon"></i>
+              </div>
+              <div class="defi-content">
+                <div class="analogy-box">
+                  <p>🤖 <strong>Funciona con "robots financieros" automáticos:</strong></p>
+                  <ol class="simple-steps">
+                    <li>Depositas cripto en la app (como poner monedas en una máquina)</li>
+                    <li>El sistema automático verifica todo</li>
+                    <li>¡Obtienes resultados al instante! (préstamo, interés, etc.)</li>
+                  </ol>
+                </div>
+                <p class="example">🔧 <em>Como cuando:</em> Usas una máquina expendedora pero en vez de snacks, obtienes servicios financieros.</p>
+              </div>
+            </div>
+    
+            <!-- DEX -->
+            <div class="defi-accordion-item">
+              <div class="defi-toggle">
+                <i class="fas fa-exchange-alt"></i>
+                ¿Qué son los DEX?
+                <i class="fas fa-chevron-down arrow-icon"></i>
+              </div>
+              <div class="defi-content">
+                <div class="analogy-box">
+                  <p>🔄 <strong>Son mercados P2P digitales:</strong></p>
+                  <div class="dex-example">
+                    <p><em>En un banco:</em> Pides cambiar dólares a euros y te cobran comisión</p>
+                    <p>➡️</p>
+                    <p><em>En un DEX:</em> Intercambias directamente con María en Japón, sin comisiones altas</p>
+                  </div>
+                </div>
+                <p class="example">📱 <em>Es como:</em> Usar Wallapop pero para dinero digital, con seguridad blockchain.</p>
+              </div>
+            </div>
+    
+            <!-- Yield Farming -->
+            <div class="defi-accordion-item">
+              <div class="defi-toggle">
+                <i class="fas fa-percentage"></i>
+                ¿Qué es la agricultura de rendimiento?
+                <i class="fas fa-chevron-down arrow-icon"></i>
+              </div>
+              <div class="defi-content">
+                <div class="analogy-box">
+                  <p>🌱 <strong>Es hacer crecer tu dinero digital:</strong></p>
+                  <ul class="simple-list">
+                    <li>Depositas cripto (como plantar semillas)</li>
+                    <li>El sistema las usa para préstamos automáticos</li>
+                    <li>Recibes "frutos" en intereses (Ej: $100 → $105 en 1 mes)</li>
+                  </ul>
+                </div>
+                <div class="warning-note">
+                  <p>⚠️ <em>Importante:</em> Como en la agricultura real, hay riesgos (clima = volatilidad del mercado)</p>
+                </div>
+              </div>
+            </div>
+            
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="platform-section">
+      <h2>Principales Protocolos</h2>
+      <div class="platform-grid">
+        <div class="platform-card">
+          <img src="images/uniswap-icon.png" alt="Uniswap">
+          <h3>Uniswap</h3>
+          <p>El DEX más grande, permite intercambiar tokens sin intermediarios</p>
+          <a href="https://app.uniswap.org" target="_blank" class="btn-design">
+            <i class="fas fa-exchange-alt"></i> Probar Swap
+          </a>
+        </div>
+        <div class="platform-card">
+          <img src="images/aave-icon.png" alt="Aave">
+          <h3>Aave</h3>
+          <p>Protocolo de préstamos con tasas de interés variables</p>
+          <a href="https://aave.com" target="_blank" class="btn-design">
+            <i class="fas fa-hand-holding-usd"></i> Simular Préstamo
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section">
+  <h2 class="section-title">Aprende con Tutoriales</h2>
+  
+  <div class="video-player-container">
+    <!-- Video Principal -->
+    <div class="video-player-wrapper video-swap-active">
+      <div class="video-player">
+        <iframe 
+          id="video-player-frame"
+          src="https://www.youtube.com/embed/SY5YlK4msck" 
+          data-title="¿Que és DeFi?"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <h2 id="main-video-title" class="video-title">¿Que és DeFi?</h2>
+    </div>
+
+    <!-- Carrusel de Miniaturas -->
+    <div class="carousel" aria-label="Selección de videos">
+      <div class="carousel-inner">
+        
+        <!-- Miniatura 1 -->
+        <div class="thumbnail" 
+             data-video="Oz998DbT6u8"
+             data-start="30"
+             data-title="Guía Completa de Uniswap para Iniciantes"
+             role="button"
+             tabindex="0"
+             aria-label="Ver tutorial de Uniswap">
+          <img 
+            src="https://img.youtube.com/vi/Oz998DbT6u8/maxresdefault.jpg" 
+            alt="Tutorial Uniswap"
+            loading="lazy"
+            class="thumbnail-image">
+          <p class="thumbnail-caption">Guía Completa de Uniswap para Iniciantes</p>
+        </div>
+
+        <!-- Miniatura 2 -->
+        <div class="thumbnail" 
+             data-video="EEMhUWA-JA0"
+             data-title="Cómo Pedir Préstamos en Aave"
+             role="button"
+             tabindex="0"
+             aria-label="Ver tutorial de Aave">
+          <img 
+            src="https://img.youtube.com/vi/EEMhUWA-JA0/maxresdefault.jpg" 
+            alt="Tutorial Aave"
+            loading="lazy"
+            class="thumbnail-image">
+          <p class="thumbnail-caption">¿Qué es Aave y cómo Pedir Préstamos?</p>
+        </div>
+
+        <!-- Miniatura 3 -->
+        <div class="thumbnail" 
+             data-video="CtP7STtGbYk"
+             data-title="Introducción a DeFi"
+             role="button"
+             tabindex="0"
+             aria-label="Introducción a DeFi">
+          <img 
+            src="https://img.youtube.com/vi/CtP7STtGbYk/maxresdefault.jpg" 
+            alt="Introducción DeFi"
+            loading="lazy"
+            class="thumbnail-image">
+          <p class="thumbnail-caption">Introducción a DeFi</p>
+        </div>
+
+        <!-- Miniatura 4 -->
+        <div class="thumbnail" 
+             data-video="Me1ZliVElI4"
+             data-title="¿Que son las DEX?"
+             role="button"
+             tabindex="0"
+             aria-label="¿Que son las DEX?">
+          <img 
+            src="https://img.youtube.com/vi/Me1ZliVElI4/maxresdefault.jpg" 
+            alt="Conceptos Básicos"
+            loading="lazy"
+            class="thumbnail-image">
+          <p class="thumbnail-caption">¿Que son las DEX?</p>
+        </div>
+
+        <!-- Miniatura 5 -->
+        <div class="thumbnail" 
+             data-video="-LPc0SwkeFw"
+             data-title="Yield Farming Básico"
+             role="button"
+             tabindex="0"
+             aria-label="Tutorial de Yield Farming">
+          <img 
+          src="https://img.youtube.com/vi/-LPc0SwkeFw/hqdefault.jpg" 
+            alt="Yield Farming"
+            loading="lazy"
+            class="thumbnail-image">
+          <p class="thumbnail-caption">Introducción al Yield Farming</p>
+        </div>
+
+        <!-- Miniatura 6 -->
+        <div class="thumbnail" 
+             data-video="CcIZFNKdefc"
+             data-title="Seguridad en DeFi"
+             role="button"
+             tabindex="0"
+             aria-label="Consejos de seguridad">
+          <img 
+            src="https://img.youtube.com/vi/CcIZFNKdefc/maxresdefault.jpg" 
+            alt="Seguridad DeFi"
+            loading="lazy"
+            class="thumbnail-image">
+          <p class="thumbnail-caption">¿Que són las Liquidity Pools?</p>
+        </div>
+        <!-- Miniatura 7 -->
+<div class="thumbnail" 
+data-video="QLlB4-ZXZXw"
+data-title="Ejemplos de Juegos Cripto"
+role="button"
+tabindex="0"
+aria-label="Algunos juegos en accion">
+<img 
+src="https://img.youtube.com/vi/QLlB4-ZXZXw/maxresdefault.jpg" 
+alt="Juegos"
+loading="lazy"
+class="thumbnail-image">
+<p class="thumbnail-caption">Ejemplos de Juegos Cripto</p>
+</div>
+<!-- Miniatura 8 -->
+<div class="thumbnail" 
+     data-video="x4Aglp7ue5k"
+     data-title="Que son los juegos blockchain"
+     role="button"
+     tabindex="0"
+     aria-label="Ver video sobre juegos blockchain">
+  <img 
+    src="https://img.youtube.com/vi/x4Aglp7ue5k/hqdefault.jpg" 
+    alt="Juegos blockchain - Vista previa"
+    loading="lazy"
+    class="thumbnail-image">
+  <p class="thumbnail-caption">¿Qué son los juegos blockchain?</p>
+</div>
+<!-- Miniatura 9 -->
+<div class="thumbnail" 
+     data-video="5CFDCTo0bLI"
+     data-title="Qué es un NFT"
+     role="button"
+     tabindex="0"
+     aria-label="Ver explicación sobre NFTs">
+  <img 
+    src="https://img.youtube.com/vi/5CFDCTo0bLI/maxresdefault.jpg" 
+    alt="Explicación sobre NFTs - Vista previa"
+    loading="lazy"
+    class="thumbnail-image">
+  <p class="thumbnail-caption">¿Qué es un NFT?</p>
+</div>
+
+      </div>
+
+      <!-- Controles de Navegación -->
+      <button class="carousel-control prev" aria-label="Vídeo anterior">❮</button>
+      <button class="carousel-control next" aria-label="Próximo vídeo">❯</button>
+      
+      <!-- Indicadores -->
+      <div class="carousel-indicators" role="navigation" aria-label="Indicadores de página"></div>
+    </div>
+  </div>
+</section>
+
+    <section class="simulator-section">
+      <h2>Simulador de Intercambio de Tokens</h2>
+      <div class="simulator-card">
+        <div class="simulator-controls">
+          <div class="input-group">
+            <label><i class="fas fa-sign-in-alt"></i> Token de Entrada:</label>
+            <select id="inputToken">
+              <option value="ETH">ETH</option>
+              <option value="USDC">USDC</option>
+              <option value="DAI">DAI</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label><i class="fas fa-sign-out-alt"></i> Token de Salida:</label>
+            <select id="outputToken">
+              <option value="USDC">USDC</option>
+              <option value="ETH">ETH</option>
+              <option value="DAI">DAI</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label><i class="fas fa-hashtag"></i> Cantidad a Intercambiar:</label>
+            <input type="number" id="swapAmount" min="0" step="0.1" placeholder="Ej: 1.5">
+          </div>
+          <button class="btn-defi" onclick="simularSwap()">
+            <i class="fas fa-exchange-alt"></i> Simular Intercambio
+          </button>
+        </div>
+        <div id="simulatorResult" class="result-success"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="super-container font-poppin">
+      <div class="components-outer-container">
+        <div class="footer-container">
+          <div class="first">
+            <div class="top">
+              <img id="footerLogo" src="images/logo.webp" alt="Footer Logo">
+            </div>
+            <div class="bottom">
+              <p class="text-white">
+                CX Crypto Lab es una plataforma creada para capacitar al equipo de CX en blockchain,
+                criptomonedas, Web3 y el universo cripto en general.
+              </p>
+            </div>
+          </div>
+          <div class="third">
+            <div class="top">
+              <p class="text-white">Creado con ❤️ por William</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  
+</body>
+<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/10/21/19/20241021190125-9JVJJLMU.js"></script>
+</html>

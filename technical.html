@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles/universal.css" />
+  <link rel="stylesheet" href="styles/colors.css" />
+  <link rel="stylesheet" href="styles/navbar.css" />
+  <link rel="stylesheet" href="styles/footer.css" />
+  <link rel="stylesheet" href="styles/technical.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Parte Técnica - CX Crypto Lab</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <script>
+    (function () {
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    })();
+  </script>
+</head>
+<body class="light">
+  <header>
+    <nav style="position: fixed; top: 0; width: 100%;">
+      <div class="nav-bar">
+        <li class="logo">
+          <a href="index.html">
+            <img id="topLogo" src="images/logo.webp" alt="CX Crypto Lab Logo" />
+          </a>
+        </li>
+
+        <div class="icon-theme-container">
+          <img src="images/moon.png" alt="Modo Escuro" class="icon-theme" id="theme-icon" />
+        </div>
+
+        <div style="display: flex;">
+          <input type="checkbox" id="check" />
+          <span class="menu font-sans">
+            <li>
+              <a class="text-white" href="https://drive.google.com/drive/folders/0AGa2Eb7GjLLiUk9PVA?hl=es" target="_blank" rel="noopener noreferrer">Encuentros</a>
+            </li>
+            <li>
+              <a class="text-white" href="preguntas.html" rel="noopener noreferrer">Preguntas</a>
+            </li>
+            <li>
+              <a class="text-white" href="cuestionario.html" rel="noopener noreferrer">Cuestionario</a>
+            </li>
+            <li>
+              <a href="noticias.html"><button class="btn-design text-bold">Novedades</button></a>
+            </li>
+            <label for="check" class="close-menu">
+              <i class="text-white fas fa-times"></i>
+            </label>
+          </span>
+        </div>
+
+        <label for="check" class="open-menu">
+          <i class="text-white fas fa-bars"></i>
+        </label>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <div class="whycm-container text-center">
+      <div>
+        <h1 class="advantage-title title font-sans margin-0 gradient-text">
+          Parte Técnica
+        </h1>
+        <p class="advantage-desc font-poppin margin-0">
+          Entiende cómo funciona el universo cripto
+        </p>
+      </div>
+    </div>
+
+    <!-- Seção de Explicações Técnicas -->
+<section class="content-section">
+    <div class="technical-intro">
+        <h2 class="section-title text-center">Conceptos Técnicos Fundamentales</h2>
+      <div class="technical-card">
+        <p class="intro-text">Explora los pilares técnicos detrás de blockchain y criptomonedas de forma clara y práctica.</p>
+        
+        <ul class="technical-list">
+          <!-- Blockchain -->
+          <li class="technical-item">
+            <div class="technical-toggle">
+              <i class="fas fa-link"></i>
+              ¿Qué es Blockchain?
+              <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+            <div class="technical-content">
+              <p>📜 <strong>Un registro digital seguro:</strong> Blockchain es como un libro mayor global y descentralizado que registra cada transacción de manera transparente e inmutable. Imagina un archivo compartido entre miles de computadoras alrededor del mundo, donde cada página (o bloque) está sellada con un candado criptográfico único. Nadie puede modificar una entrada sin el consenso de la red, garantizando seguridad, confianza y trazabilidad sin necesidad de intermediarios.</p>
+              <a href="https://bitcoin.org/files/bitcoin-paper/bitcoin_es_latam.pdf" target="_blank" class="btn-design">Whitepaper Bitcoin</a>
+            </div>
+          </li>
+  
+          <!-- Minería com ícone consistente -->
+<li class="technical-item">
+    <div class="technical-toggle">
+      <i class="fas fa-industry icon-theme"></i> <!-- Novo ícone -->
+      ¿Qué es la Minería? 
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </div>
+    <div class="technical-content">
+      <p><strong>El corazón del consenso:</strong> La minería es el proceso mediante el cual se validan las transacciones y se añaden nuevos bloques a la blockchain, especialmente en redes como Bitcoin. Los mineros utilizan potentes computadoras para resolver complejos acertijos matemáticos; el primero en lograrlo tiene el privilegio de registrar el bloque y recibe una recompensa en criptomonedas. Este esfuerzo no solo asegura la red, sino que también descentraliza el control, haciendo que el sistema sea resistente a manipulaciones.</p>
+      <a href="https://es.wikipedia.org/wiki/Miner%C3%ADa_de_bitcoin" target="_blank" class="btn-design">Más sobre Minería</a>
+    </div>
+  </li>
+  
+          <!-- PoW -->
+          <li class="technical-item">
+            <div class="technical-toggle">
+              <i class="fas fa-hammer"></i>
+              ¿Qué es Proof of Work (PoW)?
+              <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+            <div class="technical-content">
+              <p>⛏️ <strong>Minar para validar:</strong> Proof of Work es un mecanismo de consenso que asegura la integridad de la blockchain al requerir que los participantes (mineros) realicen un trabajo computacional intensivo. Resolver problemas matemáticos complejos no solo valida las transacciones, sino que también protege la red contra ataques, ya que alterar un bloque requeriría rehacer todo el trabajo posterior, algo extremadamente costoso en términos de tiempo y energía.</p>
+              <a href="https://founderz.com/es/blog/proof-of-work-ventajas/" target="_blank" class="btn-design">Más sobre PoW</a>
+            </div>
+          </li>
+  
+          <!-- PoS -->
+          <li class="technical-item">
+            <div class="technical-toggle">
+              <i class="fas fa-coins"></i>
+              ¿Qué es Proof of Stake (PoS)?
+              <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+            <div class="technical-content">
+              <p>💰 <strong>Apostar para validar:</strong> Proof of Stake es una alternativa eficiente a PoW, donde los validadores no compiten con poder computacional, sino que "apuestan" sus criptomonedas como garantía. Cuanto más tengas en stake, mayor es tu probabilidad de ser elegido para validar un bloque y recibir recompensas. Este sistema reduce drásticamente el consumo energético y fomenta la participación activa en la red, alineando los incentivos económicos con la seguridad.</p>
+              <a href="https://founderz.com/es/blog/proof-of-stake-ventajas/" target="_blank" class="btn-design">Whitepaper Ethereum</a>
+            </div>
+          </li>
+  
+          <!-- Nodos -->
+          <li class="technical-item">
+            <div class="technical-toggle">
+              <i class="fas fa-network-wired"></i>
+              ¿Qué son los Nodos?
+              <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+            <div class="technical-content">
+              <p>🌐 <strong>Guardianes de la red:</strong> Los nodos son las computadoras que forman la columna vertebral de una blockchain. Cada nodo almacena una copia completa o parcial de la cadena, verifica las transacciones y propaga la información a otros nodos. Desde nodos completos que mantienen toda la historia hasta nodos ligeros que dependen de otros, juntos aseguran que la red permanezca descentralizada, transparente y resistente a fallos o ataques.</p>
+              <a href="https://www.ledger.com/es/academy/f-conceptos-basicos-de-la-cadena-de-bloques/what-is-a-node-and-why-should-i-operate-one" target="_blank" class="btn-design">Más sobre Nodos</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+    <!-- Seção de Vídeos -->
+<section class="video-section">
+  <h2>Videos Explicativos</h2>
+  <div class="video-player-container">
+    <div class="video-player-wrapper">
+      <div class="video-player">
+        <iframe id="video-player-frame" src="https://www.youtube.com/embed/jtLl7beWud0" allowfullscreen></iframe>
+      </div>
+      <h3 id="main-video-title">Cómo crear un SMART CONTRACT con SOLIDITY</h3>
+      <div class="carousel" aria-label="Selección de videos">
+        <div class="carousel-inner">
+          <!-- Miniaturas corrigidas com data-thumbnail-type -->
+          <div class="thumbnail" 
+               data-video="3zP-VAJZQfQ" 
+               data-title="¿Qué es Criptografía?"
+               data-thumbnail-type="hqdefault">
+            <img src="https://img.youtube.com/vi/3zP-VAJZQfQ/hqdefault.jpg" 
+                 alt="Criptografía" 
+                 class="thumbnail-image">
+            <p class="thumbnail-caption">Fundamentos de Criptografía</p>
+          </div>
+
+          <div class="thumbnail" 
+               data-video="U-qeq1iV3UE" 
+               data-title="TIPOS de CADENAS de BLOQUES: BTC, ERC20, BEP20, TRC20"
+               data-thumbnail-type="maxresdefault">
+            <img src="https://img.youtube.com/vi/U-qeq1iV3UE/maxresdefault.jpg" 
+                 alt="Tipos de Cadenas" 
+                 class="thumbnail-image">
+            <p class="thumbnail-caption">Blockchains: BTC, ERC20, BEP20</p>
+          </div>
+
+          <!-- Corrigido para hqdefault -->
+          <div class="thumbnail" 
+               data-video="EVTNLiPQZ-s" 
+               data-title="¿Qué es PoW, PoS y PoI?"
+               data-thumbnail-type="hqdefault">
+            <img src="https://img.youtube.com/vi/EVTNLiPQZ-s/hqdefault.jpg" 
+                 alt="PoW, PoS, PoI" 
+                 class="thumbnail-image">
+            <p class="thumbnail-caption">PoW, PoS y PoI</p>
+          </div>
+
+          <div class="thumbnail" 
+               data-video="GjOs_W3wilc" 
+               data-title="CÓMO FUNCIONA LA MINERÍA DE CRIPTOMONEDAS"
+               data-thumbnail-type="maxresdefault">
+            <img src="https://img.youtube.com/vi/GjOs_W3wilc/maxresdefault.jpg" 
+                 alt="Minería" 
+                 class="thumbnail-image">
+            <p class="thumbnail-caption">Teoría de la Minería</p>
+          </div>
+
+          <div class="thumbnail" 
+               data-video="nL7-3l7U7uU" 
+               data-title="Cómo Minar Criptomonedas Con Cualquier Ordenador"
+               data-thumbnail-type="maxresdefault">
+            <img src="https://img.youtube.com/vi/nL7-3l7U7uU/maxresdefault.jpg" 
+                 alt="Minar con PC" 
+                 class="thumbnail-image">
+            <p class="thumbnail-caption">Minar con Cualquier PC</p>
+          </div>
+
+          <div class="thumbnail" 
+               data-video="jtLl7beWud0" 
+               data-title="Cómo crear un SMART CONTRACT con SOLIDITY"
+               data-thumbnail-type="maxresdefault">
+            <img src="https://img.youtube.com/vi/jtLl7beWud0/maxresdefault.jpg" 
+                 alt="Smart Contract" 
+                 class="thumbnail-image">
+            <p class="thumbnail-caption">Smart Contracts con Solidity</p>
+          </div>
+
+          <div class="thumbnail" 
+               data-video="wFhXon4J7HE" 
+               data-title="Aprende a crear una DAPP desde cero"
+               data-thumbnail-type="maxresdefault">
+            <img src="https://img.youtube.com/vi/wFhXon4J7HE/maxresdefault.jpg" 
+                 alt="Crear DApp" 
+                 class="thumbnail-image">
+            <p class="thumbnail-caption">Crear DApp desde Cero</p>
+          </div>
+
+          <div class="thumbnail" 
+               data-video="fnWmZ5XvbV8" 
+               data-title="Todo sobre las DApps"
+               data-thumbnail-type="maxresdefault">
+            <img src="https://img.youtube.com/vi/fnWmZ5XvbV8/maxresdefault.jpg" 
+                 alt="DApps" 
+                 class="thumbnail-image">
+            <p class="thumbnail-caption">Todo sobre DApps</p>
+          </div>
+        </div>
+        <button class="carousel-control prev" aria-label="Video anterior">❮</button>
+        <button class="carousel-control next" aria-label="Video siguiente">❯</button>
+        <div class="carousel-indicators" role="navigation" aria-label="Indicadores de página"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Laboratório Interativo -->
+<section class="simulator-section">
+    <h2>Laboratorio Interactivo</h2>
+    <div class="simulator-card">
+      <div class="simulator-controls">
+        <p class="intro-text text-center">Prueba un smart contract simple en Remix Ethereum:</p>
+        <iframe height="400" src="https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null" frameborder="no" allowfullscreen></iframe>
+        <a href="https://remix.ethereum.org/" target="_blank" class="btn-design">
+          <i class="fas fa-code"></i> Abrir Remix
+        </a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Glossário Técnico -->
+<section class="simulator-section">
+  <h2>Glosario Técnico</h2>
+  <div class="simulator-card">
+    <div class="simulator-controls">
+      <input type="text" id="glossary-search" placeholder="Busca un término (ej.: hash)">
+      <ul id="glossary-list" class="simple-list">
+        <li class="glossary-item">
+          <div class="glossary-header">
+            <strong>Hash:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Función que convierte datos en un valor único fijo.</div>
+        </li>
+        <li class="glossary-item">
+          <div class="glossary-header">
+            <strong>Nodo:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Computadora conectada a la red blockchain.</div>
+        </li>
+        <li class="glossary-item">
+          <div class="glossary-header">
+            <strong>Smart Contract:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Contrato autoejecutable en la blockchain.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Minado:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Proceso de validar transacciones resolviendo problemas matemáticos.</div>
+        </li>
+        <!-- Mecanismos de Consenso -->
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Mecanismos de Consenso:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Protocolos que permiten a los nodos acordar el estado de la blockchain.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Proof of Work (PoW):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Mecanismo de consenso basado en la resolución de problemas computacionales.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Proof of Stake (PoS):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Mecanismo de consenso basado en la participación económica en la red.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Practical Byzantine Fault Tolerance (PBFT):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Algoritmo de consenso tolerante a fallos bizantinos.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Delegated Proof of Stake (DPoS):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Variante de PoS donde los usuarios delegan su poder de voto.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Proof of Authority (PoA):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Mecanismo de consenso basado en la identidad de los validadores.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Proof of History (PoH):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Técnica que permite verificar el paso del tiempo entre eventos.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Algoritmos de Consenso Híbridos:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Combinaciones de diferentes mecanismos de consenso.</div>
+        </li>
+        <!-- Mineração e Validação -->
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Mineria de Bloques:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Proceso de añadir nuevos bloques a la blockchain mediante la resolución de problemas computacionales.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Ajuste de Dificultad:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Mecanismo que ajusta la complejidad de los problemas de minado para mantener un ritmo constante de creación de bloques.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Recompensa de Bloque:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Incentivo en criptomonedas dado a los mineros por añadir un nuevo bloque.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Fees:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Tarifas pagadas por los usuarios para que sus transacciones sean incluidas en un bloque.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Pools de Minería:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Grupos de mineros que comparten recursos computacionales para aumentar sus posibilidades de minar un bloque.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Mempool:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Área de almacenamiento temporal para transacciones pendientes de confirmación.</div>
+        </li>
+        <!-- Criptografia Básica -->
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Funciones Hash (SHA-256, Keccak):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Algoritmos que transforman datos en una cadena de longitud fija, utilizada para integridad y seguridad.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Firmas Digitales (ECDSA):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Método criptográfico para verificar la autenticidad de mensajes o transacciones.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Merkle Trees:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Estructura de datos que permite verificar eficientemente la integridad de grandes conjuntos de datos.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Zero-Knowledge Proofs (zk-SNARKs/zk-STARKs):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Técnicas que permiten probar la posesión de información sin revelarla.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Criptografía Pós-Cuántica:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Algoritmos criptográficos resistentes a ataques de computadoras cuánticas.</div>
+        </li>
+        <!-- Smart Contracts -->
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>EVM (Ethereum Virtual Machine):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Entorno de ejecución para smart contracts en Ethereum.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Solidity:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Lenguaje de programación para escribir smart contracts en Ethereum.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Vyper:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Lenguaje de programación alternativo para smart contracts en Ethereum, enfocado en seguridad.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Rust (para Solana):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Lenguaje de programación utilizado para desarrollar en la blockchain de Solana.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Gas Optimization:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Técnicas para reducir el costo computacional de las transacciones en Ethereum.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Estándares ERC (20, 721, 1155):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Estándares para la creación de tokens en Ethereum (fungibles, no fungibles, etc.).</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Ataques de Reentrancia:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Vulnerabilidad en smart contracts donde un contrato puede ser llamado recursivamente antes de completar la ejecución.</div>
+        </li>
+        <!-- Arquitetura de Rede -->
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Nodos Completos (Full Nodes):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Nodos que almacenan y verifican toda la blockchain.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Nodos Ligeros (Light Nodes):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Nodos que dependen de full nodes para verificar transacciones, almacenando solo headers de bloques.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Nodos de Archivo (Archive Nodes):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Nodos que almacenan toda la historia de la blockchain, incluyendo estados pasados.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Protocolos P2P:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Protocolos de comunicación entre pares utilizados en redes blockchain.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Sharding:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Técnica de particionamiento de la blockchain para mejorar la escalabilidad.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Sidechains:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Cadenas paralelas que permiten ejecutar transacciones fuera de la cadena principal.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Soluciones de Capa 2 (Layer 2):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Tecnologías que mejoran la escalabilidad y eficiencia sobre la cadena principal.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Comunicación Cross-Chain:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Protocolos que permiten la interacción entre diferentes blockchains.</div>
+        </li>
+        <!-- Protocolos de Camada 2 -->
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Rollups (Optimistic vs ZK-Rollups):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Soluciones de Layer 2 que agrupan transacciones para reducir la carga en la cadena principal.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Canales de Estado (Lightning Network):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Canales de pago que permiten transacciones off-chain.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Plasma Chains:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Framework para crear cadenas hijas que reportan a la cadena principal.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Validium:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Solución de escalabilidad que utiliza pruebas de validez para verificar transacciones off-chain.</div>
+        </li>
+        <!-- Tokenomics Avançado -->
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Modelos de Emisión de Tokens:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Estrategias para la creación y distribución de nuevos tokens.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Mecanismos de Staking:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Sistemas que permiten a los usuarios bloquear tokens para recibir recompensas.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Programas de Vesting:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Programas de liberación gradual de tokens para incentivar la retención.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Gobernanza On-Chain (DAOs):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Organizaciones autónomas descentralizadas que permiten la toma de decisiones colectiva.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Mecanismos de Quema (Burning):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Procesos para reducir permanentemente el suministro de tokens.</div>
+        </li>
+        <!-- Desenvolvimento de DApps -->
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Web3.js vs Ethers.js:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Bibliotecas JavaScript para interactuar con la blockchain de Ethereum.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Oráculos (Chainlink, Band Protocol):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Servicios que proporcionan datos del mundo real a smart contracts.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Indexación de Datos (The Graph):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Protocolo para indexar y consultar datos de blockchains.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>IPFS:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Sistema de almacenamiento descentralizado para datos.</div>
+        </li>
+        <!-- Segurança Avançada -->
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Vulnerabilidades Comunes (Reentrancia, Overflow):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Errores comunes en smart contracts que pueden ser explotados.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Verificación Formal:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Proceso de verificar matemáticamente la corrección de smart contracts.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Programas de Bug Bounty:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Programas que recompensan a los usuarios por reportar vulnerabilidades.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Auditorías de Smart Contracts:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Revisiones detalladas de smart contracts para identificar fallos de seguridad.</div>
+        </li>
+        <!-- Interoperabilidad -->
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Puentes (Bridges):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Mecanismos que permiten la transferencia de activos entre diferentes blockchains.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Atomic Swaps:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Intercambios directos de criptomonedas entre diferentes blockchains sin intermediarios.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Polkadot Parachains:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Cadenas paralelas en la red Polkadot que comparten seguridad.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Cosmos IBC Protocol:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Protocolo de comunicación entre blockchains en el ecosistema Cosmos.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Wrapped Tokens (WBTC, WETH):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Tokens que representan otros activos en una blockchain diferente.</div>
+        </li>
+        <!-- Tópicos Emergentes -->
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>MEV (Miner Extractable Value):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Valor que los mineros pueden extraer de la manipulación del orden de las transacciones.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Monedas de Privacidad (Monero, Zcash):</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Criptomonedas enfocadas en la privacidad y anonimato de las transacciones.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Composabilidad DeFi:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Capacidad de combinar diferentes protocolos DeFi para crear nuevas funcionalidades.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Fraccionalización de NFTs:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Proceso de dividir NFTs en partes más pequeñas para facilitar la propiedad compartida.</div>
+        </li>
+        <li class="glossary-item hidden-glossary-item">
+          <div class="glossary-header">
+            <strong>Herramientas para DAOs:</strong>
+            <i class="fas fa-chevron-down toggle-glossary-item"></i>
+          </div>
+          <div class="glossary-content">Herramientas y plataformas para la creación y gestión de DAOs.</div>
+        </li>
+      </ul>
+      <button id="toggle-glossary" class="btn-design">Ver más <i class="fas fa-chevron-down"></i></button>
+    </div>
+  </div>
+</section>
+    
+  </main>
+
+  <footer>
+    <div class="super-container font-poppin">
+      <div class="components-outer-container">
+        <div class="footer-container">
+          <div class="first">
+            <div class="top">
+              <img id="footerLogo" src="images/logo.webp" alt="Footer Logo">
+            </div>
+            <div class="bottom">
+              <p class="text-white">
+                CX Crypto Lab es una plataforma creada para capacitar al equipo de CX en blockchain,
+                criptomonedas, Web3 y el universo cripto en general.
+              </p>
+            </div>
+          </div>
+          <div class="third">
+            <div class="top">
+              <p class="text-white">Creado con ❤️ por William</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="technical.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2024/10/21/19/20241021190125-9JVJJLMU.js"></script>
+</body>
+</html>

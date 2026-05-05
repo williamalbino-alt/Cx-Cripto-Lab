@@ -1,0 +1,470 @@
+/* technical.css */
+@import "colors.css";
+
+/* Seções Gerais */
+.content-section, 
+.video-section, 
+.simulator-section {
+    padding: 4rem 8rem;
+}
+* {
+    box-sizing: border-box;
+}
+/* Centralizar textos */
+.text-center {
+    text-align: center;
+}
+/* Hero Section */
+.whycm-container {
+    padding-top: 12rem;
+}
+/* Glossário */
+.hidden-glossary-item {
+    display: none;
+}
+.section-title {
+    font-size: 2.4rem; /* Ajuste para o tamanho desejado */
+    margin: 6rem 0 3rem;
+    text-align: center; /* Mantém o alinhamento centralizado */
+    font-weight: 600;
+}
+#glossary-list.expanded .hidden-glossary-item {
+    display: block;
+}
+
+#toggle-glossary {
+    margin-top: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#toggle-glossary i {
+    transition: transform 0.3s ease;
+}
+
+#toggle-glossary.expanded i {
+    transform: rotate(180deg);
+}
+.whycm-container h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.whycm-container p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--acsent-color);
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #552194, #854ad3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    color: #854ad3; /* Fallback para navegadores que não suportam gradiente */
+}
+
+body.dark .gradient-text {
+    background: linear-gradient(90deg, #a78bfa, #e9d5ff); /* Gradiente mais claro para modo escuro */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #e9d5ff; /* Fallback mais claro */
+}
+
+/* Seção Técnica */
+.technical-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(133, 74, 211, 0.2);
+    transition: all 0.3s ease;
+}
+
+body.dark .technical-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(192, 192, 192, 0.2);
+}
+
+.technical-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(133, 74, 211, 0.5);
+}
+
+body.dark .technical-card:hover {
+    box-shadow: 0 0 15px rgba(192, 192, 192, 0.3);
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.technical-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    transition: none;
+}
+
+.technical-item {
+    margin: 1rem 0;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    min-height: 90px; /* Define uma altura mínima */
+    display: flex;
+    flex-direction: column;
+}
+
+body.light .technical-item:hover {
+    box-shadow: 0 0 15px rgba(133, 74, 211, 0.5);
+}
+
+body.dark .technical-item:hover {
+    box-shadow: 0 0 15px rgba(192, 192, 192, 0.3);
+}
+
+.technical-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.technical-toggle i:first-child {
+    margin-right: 1rem;
+    font-size: 1.4em;
+    color: #854ad3;
+}
+
+body.dark .technical-toggle i:first-child {
+    color: #ccc;
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.technical-item.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.technical-content {
+    flex-grow: 1;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 2rem;
+    transition: max-height 0.4s ease;
+}
+.technical-content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limita o texto a 3 linhas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.technical-item.active .technical-content {
+    max-height: 500px;
+    padding: 2rem;
+}
+
+.diagram-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+/* Vídeo Section */
+.video-section h2,
+.simulator-section h2 {
+    font-size: 2.4rem;
+    margin: 6rem 0 3rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.video-player-container {
+    max-width: 1280px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.video-player {
+    position: relative;
+    padding-bottom: 56.25%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#main-video-title {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding: 10px 0; /* Adiciona espaço superior e inferior */
+}
+
+.thumbnail {
+    flex: 0 0 calc(100% / 3 - 20px); /* Largura ajustada para margens */
+    margin: 0 10px; /* Margem lateral de 10px em cada lado */
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body.dark .thumbnail {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(133, 74, 211, 0.7);
+}
+
+body.dark .thumbnail:hover {
+    box-shadow: 0 0 15px rgba(192, 192, 192, 0.5);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.thumbnail p {
+    white-space: normal; /* Permite quebra de linha */
+    word-wrap: break-word; /* Quebra palavras longas, se necessário */
+    overflow: visible; /* Evita que o texto seja cortado */
+    max-width: 100%; /* Limita o texto à largura da miniatura */
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(94, 10, 187, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.carousel-control:hover {
+    background: rgba(71, 10, 140, 0.7);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Laboratório e Glossário */
+.simulator-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(133, 74, 211, 0.2);
+    margin: 2rem auto;
+    max-width: 600px;
+    transition: all 0.3s ease;
+}
+
+body.dark .simulator-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(192, 192, 192, 0.2);
+}
+
+.simulator-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(133, 74, 211, 0.5);
+}
+
+body.dark .simulator-card:hover {
+    box-shadow: 0 0 15px rgba(192, 192, 192, 0.3);
+}
+
+.simulator-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.simulator-controls iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+#glossary-search {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid rgba(133, 74, 211, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+body.dark #glossary-search {
+    border: 1px solid rgba(192, 192, 192, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#glossary-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+#glossary-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content-section,
+    .video-section,
+    .simulator-section {
+        padding: 2rem;
+    }
+
+    .gradient-text {
+        font-size: 2.4rem;
+    }
+
+    .whycm-container p {
+        font-size: 1.2rem;
+    }
+
+    .thumbnail {
+        flex: 0 0 calc(100% / 2);
+    }
+}
+/* Adicionar ao seu arquivo CSS existente */
+
+/* Estilo para os itens do glossário */
+.glossary-item {
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .glossary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+  }
+  
+  body.dark .glossary-header {
+    background: rgba(255, 255, 255, 0.025);
+  }
+  
+  .glossary-header:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  body.dark .glossary-header:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .glossary-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .glossary-item.active .glossary-content {
+    padding: 0.8rem;
+    max-height: 200px;
+    border-top: 1px solid rgba(133, 74, 211, 0.2);
+    background: rgba(255, 255, 255, 0.02);
+  }
+  
+  .toggle-glossary-item {
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle-glossary-item.rotate {
+    transform: rotate(180deg);
+  }
+  
+  /* Ajustes para manter a funcionalidade de Ver más/Ver menos */
+  #glossary-list.expanded .hidden-glossary-item {
+    display: block;
+  }
+  
+  /* Classe especial para itens que são resultados de pesquisa */
+  .glossary-item.search-result {
+    display: block !important;
+  }
+  
+  /* Ajustes de estilo para o botão ver mais/menos */
+  #toggle-glossary i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  #toggle-glossary.expanded i {
+    transform: rotate(180deg);
+  }

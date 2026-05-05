@@ -1,0 +1,112 @@
+/* universal.css */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+/* Define o modo claro como padrão absoluto */
+:root {
+  --primary-bg: #f9f9f9; /* Fundo claro padrão */
+  --primary-color: #333; /* Texto escuro padrão */
+}
+
+body {
+  background-color: #ffffff; /* Força o claro como padrão */
+  color: #000; /* Texto escuro como padrão */
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Usa as variáveis, mas só depois que o tema é aplicado */
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+}
+
+/* Reforça o modo claro quando a classe light está presente */
+body.light {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Aplica o modo escuro apenas quando a classe dark está presente */
+body.dark {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* ... (restante do universal.css permanece igual) ... */
+
+a {
+  text-decoration: none;
+}
+
+.font-sans {
+  font-family: "DM Sans", sans-serif;
+}
+
+.font-poppin {
+  font-family: "Poppins", sans-serif;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.headerText a {
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #8036C3;
+  color: white;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.headerText a:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px rgba(128, 54, 195, 0.7);
+}
+
+.text-white {
+  color: var(--primary-color);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-dark {
+  background-color: var(--main-bg);
+}
+
+.bg-dark-light {
+  background-color: var(--dark-light-bg);
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.video-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  text-align: center;
+}

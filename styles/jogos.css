@@ -1,0 +1,902 @@
+/* noticias.css */
+body {
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  body.dark {
+    background: #1a1a1a;
+    color: #fff;
+  }
+  
+  
+  .news-title {
+    background: linear-gradient(90deg, #552194, #854ad3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.8rem;
+    margin: 0 auto 1rem;
+    display: table;
+    text-align: center;
+    width: fit-content;
+    line-height: 1.2;
+    font-weight: 700;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  body.dark .news-title {
+    background: linear-gradient(90deg, #8a63d6, #b28cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .news-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--acsent-color);
+    margin-bottom: 3rem;
+  }
+  
+  
+  
+  /* Responsividade */
+  
+    .news-title {
+        font-size: 2.2rem;
+        width: 90%;
+        max-width: 600px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  
+    .news-subtitle {
+        font-size: 1rem;
+    }
+  
+  
+  /* jogos.css */
+
+  /* Ajustar título */
+  .games-section {
+    padding: 180px 5% 60px; /* Aumenta o padding superior de 100px para 120px */
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: center;
+}
+  
+  .games-title {
+    background: linear-gradient(90deg, #552194, #854ad3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.8rem;
+    margin: 0 auto 1rem;
+    display: table;
+    text-align: center;
+    width: fit-content;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  
+  body.dark .games-title {
+    background: linear-gradient(90deg, #8a63d6, #b28cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .games-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--acsent-color);
+    margin-bottom: 3rem;
+  }
+  
+  /* Cards Modernos */
+  .games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+  
+.game-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
+    min-height: 300px; /* Altura mínima para consistência */
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid rgba(128, 48, 208, 0.1);
+}
+  
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(128, 48, 208, 0.15);
+}
+.game-icon {
+    font-size: 2.5em;
+    color: #854ad3;
+    margin-bottom: 15px;
+}
+.game-btn {
+    background: #854ad3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .game-btn:hover {
+    background: #6b3ca8;
+  }
+/* MODAL PRINCIPAL */
+.game-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(39, 39, 39, 0.9); /* Fundo mais escuro */
+  z-index: 1000;
+}
+.game-modal.active {
+    display: block;
+    opacity: 1;
+}
+.game-modal .modal-content {
+  position: absolute;
+  top: 30%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 95vh;
+  max-width: 1600px;
+  padding: 15px; 
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  background: rgba(112, 112, 112, 0.95);
+}
+/* CONTEÚDO DO MODAL */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 95vh;
+  max-width: 1600px;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(0,0,0,0.5); /* Sombra mais intensa */
+  backdrop-filter: blur(10px); /* Efeito de vidro fosco */
+  background: rgba(112, 112, 112, 0.95); /* Fundo semi-transparente */
+}
+body.dark .modal-content {
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+}
+/* Mejorar botón de cerrar */
+.close-btn {
+  cursor: pointer; /* Adicione esta propriedade */
+  user-select: none; /* Impede a seleção de texto */
+  position: absolute;
+  top: -5px;
+  right: 15px;
+  font-size: 32px;
+  z-index: 1001;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+  body.dark .close-btn {
+    color: white; /* Branco no modo escuro */
+}
+.close-btn:hover {
+    color: #6a3ab0; /* Tom mais escuro para hover */
+    transform: rotate(90deg); /* Efeito visual opcional */
+}
+body.light .close-btn {
+    color: #333; /* Cinza escuro no modo claro para contraste */
+}
+.memory-game-container {
+    padding: 20px;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    color: white;
+  }
+  .attempts-container {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  /* CONTAINER DO IFRAME */
+.game-iframe-container {
+  flex: 1;
+  min-height: 0;
+  margin-top: 15px;
+  background: #000; /* Fundo preto para melhor contraste */
+  border-radius: 8px;
+  overflow: hidden;
+}
+/* No arquivo do jogo da memoria (memoria/styles.css) */
+.game-container {
+  min-height: 600px; /* Altura mínima adequada */
+  padding: 20px;
+  overflow-y: auto; /* Permitir scroll interno se necessário */
+}
+@media (max-width: 768px) {
+  .game-container {
+      min-height: 500px;
+      transform: scale(0.8);
+  }
+}
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .modal-content {
+      width: 98%;
+      height: 90vh;
+      padding: 10px;
+  }
+  
+  .game-iframe-container {
+      margin-top: 10px;
+  }
+  
+  .close-btn {
+      font-size: 28px;
+      right: 10px;
+  }
+}
+/* IFRAME */
+.game-iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+/* Adicione isso na seção dos botões */
+.game-card .game-btn {
+  margin: 5px;
+  width: calc(100% - 10px);
+}
+
+.game-card .game-btn[data-action="iframe"] {
+  background: #854ad3;
+}
+
+.game-card .game-btn[data-action="new-tab"] {
+  background: #6a3ab0;
+}
+
+/* Container para os botões */
+.game-card-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+}
+.open-new-tab {
+  display: block;
+  width: fit-content;
+  margin: 15px auto 0;
+  padding: 12px 25px;
+  background: #6a3ab0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.game-btn[data-action="iframe"]:hover, 
+.game-btn[data-action="new-tab"]:hover {
+    background: #6b3ca8 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.open-new-tab:hover {
+  background: #854ad3;
+  transform: translateY(-2px);
+}
+@media (max-width: 1440px) {
+  .game-modal .modal-content {
+    top: 32%; /* Ajusta a posição vertical, se necessário */
+    width: 80%; /* Reduz a largura para caber melhor */
+    height: 95vh; /* Reduz a altura para não ocupar tanto espaço */
+    max-width: 1200px; /* Limita a largura máxima */
+  }
+
+  .game-iframe-container iframe {
+    height: 100%; /* Garante que o iframe ocupe a altura disponível */
+  }
+}
+@media (max-width: 768px) {
+  .game-iframe-container {
+      height: 65vh;
+  }
+  
+  .game-card-buttons {
+      flex-direction: column;
+  }
+  
+  .game-btn {
+      width: 100%;
+      transition: all 0.3s ease !important;
+  }
+}
+
+.game-card:hover .game-icon {
+    transform: scale(1.1);
+    color: #6a3ab0;
+}
+  
+  body.light .game-card:hover {
+    box-shadow: 0 0 25px 10px rgba(128, 48, 208, 0.3);
+  }
+  
+  body.dark .game-card:hover {
+    box-shadow: 0 0 25px 10px rgba(192, 192, 192, 0.2);
+  }
+  
+  .game-card-title {
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+    color: #2d2d2d;
+    font-weight: 600;
+}
+  
+.game-summary {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+  
+.game-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #854ad3, #6a3ab0);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+  
+.game-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(128, 48, 208, 0.3);
+}
+  
+  .game-content {
+    margin-top: 2rem;
+    text-align: left;
+  }
+  /* Dark Mode */
+  body.dark .game-card {
+    background: #2a2a2a;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+  
+  body.dark .game-card-title {
+    color: #fff;
+  }
+  
+  body.dark .game-summary {
+    color: #ccc;
+  }
+  /* Light Mode */
+  body.light .game-card {
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  body.light .game-card-title {
+    color: #333;
+  }
+  
+  body.light .game-summary {
+    color: #666;
+  }
+  #cryptozombies iframe {
+    min-height: 800px;
+    width: 100%;
+  }
+  /* Elementos Adicionais */
+.game-progress {
+    height: 4px;
+    background: #eee;
+    border-radius: 2px;
+    margin: 1rem 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+.progress {
+    height: 100%;
+    background: #854ad3;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+.question-level {
+    color: #854ad3;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.question-text {
+    font-size: 1.3em;
+    margin: 20px 0;
+}
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.game-stats {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.game-difficulty {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.difficulty-tag {
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(133, 74, 211, 0.1);
+    color: #854ad3;
+    font-size: 0.8rem;
+}
+
+.game-highscore {
+    margin: 1rem 0;
+    color: #854ad3;
+    font-weight: 500;
+}
+
+/* Dark Mode */
+body.dark .game-card {
+    background: #1a1a1a;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .game-card-title {
+    color: #fff;
+}
+
+body.dark .game-summary {
+    color: #ccc;
+}
+
+body.dark .game-stats,
+body.dark .stat-item {
+    color: #aaa;
+}
+/* Contenedor de Juegos */
+.game-content-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game-content-inner {
+    background: white;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+}
+
+body.dark .game-content-inner {
+    background: #1a1a1a;
+}
+
+.game-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Iframes Fullscreen */
+.game-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Juego de Memoria Mejorado */
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.memory-card {
+    aspect-ratio: 1;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+.memory-card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+.memory-card .front, .memory-card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+.memory-card .back {
+    transform: rotateY(180deg);
+    background: #854ad3;
+    color: white;
+  }
+
+.memory-card .front {
+    background: #333;
+    color: white;
+  }
+.memory-card .back {
+    transform: rotateY(180deg);
+}
+
+.memory-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.memory-card.matched {
+    background: #4CAF50;
+  }
+@keyframes matchAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+body.dark .memory-card {
+    background: #333;
+}
+.victory-message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 8px;
+  }
+.memory-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.memory-header h3 {
+    font-size: 2rem;
+    color: #854ad3;
+    margin-bottom: 10px;
+}
+.intentos {
+    font-size: 1.2rem;
+    color: #333;
+}
+body.dark .intentos {
+    color: #ccc;
+}
+/* Quiz mejorado */
+.quiz-container {
+    background: linear-gradient(135deg, #f9f9f9, #ececec);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    position: relative;
+}
+body.dark .quiz-container {
+    background: linear-gradient(135deg, #333, #222);
+}
+.nivel-mensaje {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #854ad3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    z-index: 1002;
+}
+.quiz-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/crypto-bg.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -1;
+}
+.question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.timer {
+    background: #f0e6ff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #854ad3;
+}
+.quiz-question {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.quiz-options {
+    display: grid;
+    gap: 10px;
+}
+
+.quiz-option {
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #fff;
+    text-align: left;
+}
+
+.quiz-option:hover {
+    background: #f8f5ff;
+}
+
+body.dark .quiz-option:hover {
+    background: #444;
+}
+body.dark .quiz-option {
+    background: #333;
+    border-color: #555;
+}
+/* Responsividade */
+@media (max-width: 900px) {
+    .games-section {
+        padding: 100px 5% 40px;
+    }
+    
+    .game-card {
+        padding: 1.5rem;
+    }
+}
+  /* Media query para telas menores (ex: Macbook) */
+@media (max-width: 1200px) { 
+    #cryptozombies iframe {
+      min-height: 600px; 
+      
+    }
+  }
+  /* Seção Curiosidades - Versão Moderna */
+/* Seção Curiosidades - Versão Tematizada */
+.curiosidades-section {
+  margin: 4rem auto;
+  max-width: 1200px;
+  padding: 0 1.5rem;
+}
+
+.curiosidades-intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  background: var(--secondary-bg);
+  border-radius: 16px;
+  border: 1px solid rgba(var(--primary-color), 0.1);
+}
+
+.curiosidades-intro h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.curiosidades-intro p {
+  color: var(--acsent-color);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.curiosidades-list {
+  list-style: none;
+  padding: 0;
+  display: inline-flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.curiosidades-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--primary-color);
+  padding: 0.8rem 1.5rem;
+  background: rgba(var(--blog), 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(var(--blog), 0.3);
+}
+
+.curiosidades-toggle {
+  background: linear-gradient(135deg, var(--blog) 0%, var(--blog-secondary) 100%);
+  border: none;
+  border-radius: 12px;
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(var(--blog), 0.3);
+}
+
+.curiosidades-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(var(--blog), 0.4);
+}
+
+.curiosidades-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.curiosidades-content.active {
+  max-height: 1000px;
+  margin-top: 2rem;
+}
+
+.curiosidade-video {
+  background: transparent; /* Remove o fundo sólido para integrar ao fundo da página */
+  border: none; /* Remove a borda */
+  box-shadow: none; /* Remove a sombra para um visual mais leve */
+  padding: 0; /* Remove o espaçamento interno */
+  transition: transform 0.3s ease; /* Mantém a transição para o hover */
+}
+
+.curiosidade-video:hover {
+  transform: translateY(-5px); /* Mantém o efeito de elevação no hover */
+}
+
+.video-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.video-header i {
+  color: var(--blog-secondary);
+  font-size: 1.8rem;
+}
+
+.video-header h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.curiosidade-video iframe {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  border: none;
+  background: var(--primary-bg);
+}
+.modal {
+  display: none; /* Escondido por padrão */
+  position: fixed;
+  z-index: 1000; /* Fica acima de outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
+}
+
+.modal-content {
+  position: relative;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px; /* Largura máxima do modal */
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+#modalIframe {
+  width: 100%;
+  height: 450px; /* Altura maior para o vídeo */
+  border-radius: 10px;
+}

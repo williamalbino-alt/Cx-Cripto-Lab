@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/universal.css" />
+    <link rel="stylesheet" href="styles/colors.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/noticias.css" /> <!-- Novo CSS para notícias -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <title>Novedades - CX Crypto Lab</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script>
+        (function () {
+          if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark");
+          }
+          // Não precisa adicionar .light, pois o padrão já é claro
+        })();
+      </script>
+  </head>
+  <body class="light">
+    <header>
+      <nav style="position: fixed; top: 0; width: 100%;">
+        <div class="nav-bar">
+          <li class="logo">
+            <a href="index.html">
+              <img id="topLogo" src="images/logo.webp" alt="CX Crypto Lab Logo" />
+            </a>
+          </li>
+
+          <div class="icon-theme-container">
+            <img src="images/moon.png" alt="Modo Escuro" class="icon-theme" id="theme-icon" />
+          </div>
+
+          <div style="display: flex;">
+            <input type="checkbox" id="check" />
+            <span class="menu font-sans">
+              <li>
+                <a class="text-white" href="https://drive.google.com/drive/folders/0AGa2Eb7GjLLiUk9PVA?hl=es" target="_blank" rel="noopener noreferrer">Encuentros</a>
+              </li>
+              <li>
+                <a class="text-white" href="preguntas.html" rel="noopener noreferrer">Preguntas</a>
+              </li>
+              <li>
+                <a class="text-white" href="cuestionario.html" rel="noopener noreferrer">Cuestionario</a>
+              </li>
+              <li>
+                <a href="noticias.html"><button class="btn-design text-bold">Novedades</button></a>
+              </li>
+              <label for="check" class="close-menu">
+                <i class="text-white fas fa-times"></i>
+              </label>
+            </span>
+          </div>
+
+          <label for="check" class="open-menu">
+            <i class="text-white fas fa-bars"></i>
+          </label>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="news-section">
+        <h1 class="news-title font-sans text-bold text-center">Novedades del Mundo Cripto</h1>
+        <p class="news-subtitle font-poppin text-center">Mantente al día con las últimas noticias sobre blockchain, Web3 y más</p>
+
+        <div class="news-grid">
+          <!-- Notícia 1 -->
+          <a href="https://www.criptonoticias.com/mercados/usdt-argentina-levantamiento-cepo-milei/" target="_blank" rel="noopener noreferrer" class="news-card">
+            <img src="images/news1.webp" alt="Noticia sobre BTC" class="news-image" />
+            <div class="news-content">
+              <h2 class="news-card-title">Cayó USDT en Argentina tras el levantamiento del cepo</h2>
+              <p class="news-summary">Las stablecoins son una forma de dolarizarse sin comprar dólares en el mercado de cambio oficial.</p>
+            </div>
+          </a>
+
+          <!-- Notícia 2 -->
+          <a href="https://www.criptonoticias.com/mercados/explosion-bitcoin-criptomonedas-masiva/" target="_blank" rel="noopener noreferrer" class="news-card">
+            <img src="images/news2.webp" alt="Noticia sobre Bybit " class="news-image" />
+            <div class="news-content">
+              <h2 class="news-card-title">La explosión de bitcoin y las criptomonedas será masiva</h2>
+              <p class="news-summary">A pesar de las actuales correcciones, diversos datos del mercado muestran que la industria de criptomonedas crece a paso acelerado.</p>
+            </div>
+          </a>
+
+          <!-- Notícia 3 -->
+          <a href="https://www.criptonoticias.com/mercados/jasmy-bitcoin-japones-subida-semanal/" target="_blank" rel="noopener noreferrer" class="news-card">
+            <img src="images/news3.webp" alt="Noticia general" class="news-image" />
+            <div class="news-content">
+              <h2 class="news-card-title">El autoproclamado «bitcoin japonés» vuelve a destacarse por su subida semanal </h2>
+              <p class="news-summary">JasmyCoin es un token de Ethereum que se enfoca en el internet de las cosas.</p>
+            </div>
+          </a>
+
+          <!-- Adicione mais notícias conforme necessário -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="super-container font-poppin">
+        <div class="components-outer-container">
+          <div class="footer-container">
+            <div class="first">
+              <div class="top">
+                <img id="footerLogo" src="images/logo.webp" alt="Footer Logo">
+              </div>
+              <div class="bottom">
+                <p class="text-white">
+                  CX Crypto Lab es una plataforma creada para capacitar al equipo de CX en blockchain, 
+                  criptomonedas, Web3 y el universo cripto en general.
+                </p>
+              </div>
+            </div>
+            <div class="third">
+              <div class="top">
+                <p class="text-white">Creado con ❤️ por William</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+
+  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/10/21/19/20241021190125-9JVJJLMU.js"></script>
+
+</html>

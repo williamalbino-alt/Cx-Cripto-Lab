@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/universal.css" />
+    <link rel="stylesheet" href="styles/colors.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <title>Mi club App</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script>
+      (function () {
+        if (localStorage.getItem("theme") === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body class="light"> <!-- Mudado de "dark" para "light" -->
+    <header>
+      <nav style="position: fixed; top: 0; width: 100%;">
+        <div class="nav-bar">
+          <li class="logo">
+            <a href="index.html">
+              <img id="topLogo" src="images/logo.webp" alt="CX Crypto Lab Logo" />
+            </a>
+          </li>
+
+          <div class="icon-theme-container">
+            <img src="images/moon.png" alt="Modo Escuro" class="icon-theme" id="theme-icon" />
+          </div>
+
+          <div style="display: flex;">
+            <input type="checkbox" id="check" />
+            <span class="menu font-sans">
+              <li>
+                <a class="text-white" href="https://drive.google.com/drive/folders/0AGa2Eb7GjLLiUk9PVA?hl=es" target="_blank" rel="noopener noreferrer">Encuentros</a>
+              </li>
+              <li>
+                <a class="text-white" href="preguntas.html" rel="noopener noreferrer">Preguntas</a>
+              </li>
+              <li>
+                <a class="text-white" href="cuestionario.html" rel="noopener noreferrer">Cuestionario</a>
+              </li>
+              <li>
+                <a href="noticias.html"><button class="btn-design text-bold">Novedades</button></a>
+              </li>
+              <label for="check" class="close-menu">
+                <i class="text-white fas fa-times"></i>
+              </label>
+            </span>
+          </div>
+
+          <label for="check" class="open-menu">
+            <i class="text-white fas fa-bars"></i>
+          </label>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="first-section">
+        <div class="headerText font-sans">
+          <h2 class="section-one-title text-bold">
+            Explorar un mundo<br>
+            <span class="typed_text"></span>
+          </h2>
+          <h3 class="text-white">
+            Donde tu barrio cobra vida
+          </h3>
+          <a href="#tools-section" class="text-bold">Comenzar</a>
+        </div>
+        <div class="headerImage-div">
+          <img
+            src="images/headerImage.webp"
+            alt="A Boy Working on Laptop"
+            class="headerImage" />
+        </div>
+      </div>
+
+      <div class="second-section">
+        <div class="journey-title text-bold text-center">
+          <p class="font-sans">Nuestro objetivo</p>
+        </div>
+        <div class="journey-list">
+          <div class="journey-items font-sans text-center">
+            <h4>Comprender la tecnología detrás de las criptomonedas</h4>
+            <p>Capacitar al equipo de CX en blockchain, smart contracts y el ecosistema cripto</p>
+          </div>
+          <div class="border-right"></div>
+          <div class="journey-items font-sans text-center">
+            <h4>Alinear CX con la innovación en Web3</h4>
+            <p>Adaptarnos a los cambios del sector para ofrecer soporte actualizado y preciso</p>
+          </div>
+          <div class="border-right"></div>
+          <div class="journey-items font-sans text-center">
+            <h4>Dominar los fundamentos de seguridad y descentralización</h4>
+            <p>Entender cómo funcionan la privacidad, las wallets y la protección de activos digitales</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="line-div"></div>
+
+      <div class="whycm-container text-center">
+        <div>
+          <h1 class="advantage-title title font-sans margin-0">
+            Videos sugeridos
+          </h1>
+          <p class="advantage-desc font-poppin margin-0">
+            Accede a videos, herramientas y actividades para mejorar tu conocimiento en cripto y CX
+          </p>
+        </div>
+
+        <!-- INÍCIO DA NOVA ESTRUTURA DO CARROSSEL -->
+        <div class="carousel">
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item">
+              <a href="https://www.youtube.com/watch?v=8rUGRdOi3XM" target="_blank" rel="noopener noreferrer">
+                <div class="card">
+                  <img class="course-thumbnail" src="images/course_thumbnail.webp" alt="Course Thumbnail" />
+                  <p class="card-level text-bold">¿Que es el blockchain?</p>
+                  <h3 class="course-title">Explorá la tecnología que permite la descentralización y la seguridad en el mundo de las criptomonedas.</h3>
+                </div>
+              </a>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <a href="https://www.youtube.com/watch?v=Yh4eiMH6nIQ" target="_blank" rel="noopener noreferrer">
+                <div class="card">
+                  <img class="course-thumbnail" src="images/course_thumbnail2.webp" alt="Course Thumbnail" />
+                  <p class="card-level text-bold">¿Que es la web3?</p>
+                  <h3 class="course-title">Explorá la nueva era de internet descentralizado y sus aplicaciones.</h3>
+                </div>
+              </a>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <a href="https://www.youtube.com/watch?v=SY5YlK4msck&t" target="_blank" rel="noopener noreferrer">
+                <div class="card">
+                  <img class="course-thumbnail" src="images/course_thumbnail3.webp" alt="Course Thumbnail" />
+                  <p class="card-level text-bold">¿Que es DeFi?</p>
+                  <h3 class="course-title">Explorá el ecosistema de finanzas descentralizadas y su impacto en el sistema financiero tradicional.</h3>
+                </div>
+              </a>
+            </div>
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+              <a href="https://www.youtube.com/watch?v=Y8cpvreU9D0" target="_blank" rel="noopener noreferrer">
+                <div class="card">
+                  <img class="course-thumbnail" src="images/course_thumbnail4.webp" alt="Course Thumbnail" />
+                  <p class="card-level text-bold">¿Que son los Smart Contracts?</p>
+                  <h3 class="course-title">Explorá cómo los contratos inteligentes automatizan acuerdos sin intermediarios y potencian la blockchain.</h3>
+                </div>
+              </a>
+            </div>
+            <!-- Slide 5 -->
+            <div class="carousel-item">
+              <a href="https://www.youtube.com/watch?v=WWn67-tY2PU" target="_blank" rel="noopener noreferrer">
+                <div class="card">
+                  <img class="course-thumbnail" src="images/course_thumbnail5.webp" alt="Course Thumbnail" />
+                  <p class="card-level text-bold">¿Que es el gas?</p>
+                  <h3 class="course-title">Explorá el costo de las transacciones en Ethereum y cómo optimizar su uso en la red descentralizada.</h3>
+                </div>
+              </a>
+            </div>
+            <!-- Slide 6 -->
+            <div class="carousel-item">
+              <a href="https://www.youtube.com/watch?v=rpIuhCgpJwQ" target="_blank" rel="noopener noreferrer">
+                <div class="card">
+                  <img class="course-thumbnail" src="images/course_thumbnail6.webp" alt="Course Thumbnail" />
+                  <p class="card-level text-bold">¿Que son las criptomonedas?</p>
+                  <h3 class="course-title">Descubrí el mundo de los activos digitales y su impacto en la economía global.</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Botões de Navegação -->
+          <button class="carousel-control prev">❮</button>
+          <button class="carousel-control next">❯</button>
+          <!-- Indicadores -->
+          <div class="carousel-indicators"></div>
+        </div>
+        <!-- FIM DA NOVA ESTRUTURA -->
+      </div> <!-- Fecha .whycm-container -->
+
+      <div class="line-div"></div>
+
+      <div class="advantage-section bg-dark" id="tools-section">
+        <div class="advantage-sub-section">
+          <div class="whycm-container">
+            <div>
+              <h1 class="advantage-title title font-sans margin-0">
+                Todo lo que necesitas para entrenarte
+              </h1>
+              <p class="advantage-desc font-poppin margin-0">
+                Accede a videos, herramientas y actividades para mejorar tu conocimiento en cripto y CX
+              </p>
+            </div>
+
+            <div class="adv-section">
+              <a href="defi.html"><div class="adv-card">
+                <img src="images/pocketFriendlyCourses.webp" alt="" />
+                <span class="adv-desc margin-0">Mundo del DeFi</span>
+              </div> </a>
+
+              <a href="todo.html"><div class="adv-card">
+                <img src="images/highQualityLectures.webp" alt="" />
+                <span class="adv-desc margin-0">Módulos de Vídeo para CX</span>
+              </div></a>
+
+              <a href="jogos.html"><div class="adv-card">
+                <img src="images/detailedExplanations.webp" alt="" />
+                <span class="adv-desc margin-0">Juegos interactivos</span>
+              </div></a>
+
+              <a href="technical.html"><div class="adv-card">
+                <img src="images/practiceProblems.webp" alt="" />
+                <span class="adv-desc margin-0">Parte técnica</span>
+              </div></a>
+
+              <a href="industria.html"><div class="adv-card">
+                <img src="images/industryCurriculum.webp" alt="" />
+                <span class="adv-desc margin-0">Conceptos clave de la industria</span>
+              </div></a>
+
+              <a href="noticias.html" class="adv-card-link">
+                <div class="adv-card">
+                    <img src="images/lifetimeAccess.webp" alt="" />
+                    <span class="adv-desc margin-0">Noticias del mundo</span>
+                </div>
+            </a>
+
+            <a href="preguntas.html" class="adv-card-link">
+              <div class="adv-card">
+                <img src="images/doubtSupport.webp" alt="" />
+                <span class="adv-desc margin-0">Soporte y resolución de dudas</span>
+              </div>
+            </a>
+            <a href="cuestionario.html" class="adv-card-link">
+              <div class="adv-card">
+                <img src="images/certificate.webp" alt="" />
+                <span class="adv-desc margin-0">Cuestionario para practicar los encuentros</span>
+              </div> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="line-div"></div>
+    </main>
+
+    <div class="line-div"></div>
+
+    <footer>
+      <div class="super-container font-poppin">
+        <div class="components-outer-container">
+          <div class="footer-container">
+            <div class="first">
+              <div class="top">
+                <img id="footerLogo" src="images/logo.webp" alt="Footer Logo">
+              </div>
+              <div class="bottom">
+                <p class="text-white">
+                  CX Crypto Lab es una plataforma creada para capacitar al equipo de CX en blockchain,
+                  criptomonedas, Web3 y el universo cripto en general,
+                  potenciando su conocimiento para ofrecer un soporte más especializado y eficiente.
+                </p>
+              </div>
+            </div>
+
+            <div class="third">
+              <div class="top">
+                <p class="text-white">Creado con ❤️ por William</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed(".typed_text", {
+        strings: [
+          "De oportunidades",
+          "De conexiones",
+          "De diversión"
+        ],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+      });
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+  
+  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2024/10/21/19/20241021190125-9JVJJLMU.js"></script>
+  
+</html>

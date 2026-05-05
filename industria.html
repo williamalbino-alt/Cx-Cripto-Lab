@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/universal.css" />
+    <link rel="stylesheet" href="styles/colors.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/industria.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <title>Conceptos Clave - CX Crypto Lab</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script>
+      (function () {
+        if (localStorage.getItem("theme") === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body class="light">
+    <header>
+      <nav style="position: fixed; top: 0; width: 100%;">
+        <div class="nav-bar">
+          <li class="logo">
+            <a href="index.html">
+              <img id="topLogo" src="images/logo.webp" alt="CX Crypto Lab Logo" />
+            </a>
+          </li>
+
+          <div class="icon-theme-container">
+            <img src="images/moon.png" alt="Modo Escuro" class="icon-theme" id="theme-icon" />
+          </div>
+
+          <div style="display: flex;">
+            <input type="checkbox" id="check" />
+            <span class="menu font-sans">
+              <li>
+                <a class="text-white" href="https://drive.google.com/drive/folders/0AGa2Eb7GjLLiUk9PVA?hl=es" target="_blank" rel="noopener noreferrer">Encuentros</a>
+              </li>
+              <li>
+                <a class="text-white" href="preguntas.html" rel="noopener noreferrer">Preguntas</a>
+              </li>
+              <li>
+                <a class="text-white" href="cuestionario.html" rel="noopener noreferrer">Cuestionario</a>
+              </li>
+              <li>
+                <a href="noticias.html"><button class="btn-design text-bold">Novedades</button></a>
+              </li>
+              <label for="check" class="close-menu">
+                <i class="text-white fas fa-times"></i>
+              </label>
+            </span>
+          </div>
+
+          <label for="check" class="open-menu">
+            <i class="text-white fas fa-bars"></i>
+          </label>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Introdução ao glossário -->
+      <section class="glossary-intro">
+        <h1 class="glossary-title">Conceptos Clave de la Industria</h1>
+        <p class="glossary-subtitle">
+          La industria cripto está llena de conceptos innovadores que pueden ser desafiantes al principio. Este glosario interactivo te ayudará a entender los términos clave, desde blockchain hasta seguridad, para que navegues el mundo cripto con confianza.
+        </p>
+      </section>
+    
+      <!-- Filtros por categoría -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">Todos</button>
+        <button class="filter-btn" data-category="blockchain">Blockchain</button>
+        <button class="filter-btn" data-category="tokens">Tokens</button>
+        <button class="filter-btn" data-category="seguridad">Seguridad</button>
+        <button class="filter-btn" data-category="web3">Web3</button>
+      </div>
+    
+      <!-- Grade de cards -->
+      <div class="glossary-grid">
+        <!-- Card 1: Blockchain -->
+        <div class="glossary-card" data-category="blockchain">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-link card-icon"></i>
+              <h2>Blockchain</h2>
+            </div>
+            <div class="card-back">
+              <p>Una cadena de bloques que registra transacciones de forma segura y descentralizada.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 2: DApp -->
+        <div class="glossary-card" data-category="blockchain">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-cubes card-icon"></i>
+              <h2>DApp</h2>
+            </div>
+            <div class="card-back">
+              <p>Aplicación descentralizada que funciona en una red blockchain.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 3: Token -->
+        <div class="glossary-card" data-category="tokens">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-coins card-icon"></i>
+              <h2>Token</h2>
+            </div>
+            <div class="card-back">
+              <p>Activo digital creado y gestionado en una blockchain, representando valor o utilidad.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 4: NFT -->
+        <div class="glossary-card" data-category="tokens">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-image card-icon"></i>
+              <h2>NFT</h2>
+            </div>
+            <div class="card-back">
+              <p>Token no fungible que representa la propiedad única de un activo digital.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 5: Wallet -->
+        <div class="glossary-card" data-category="seguridad">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-wallet card-icon"></i>
+              <h2>Wallet</h2>
+            </div>
+            <div class="card-back">
+              <p>Cartera digital para almacenar y gestionar criptomonedas y tokens.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 6: Smart Contract -->
+        <div class="glossary-card" data-category="web3">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-file-contract card-icon"></i>
+              <h2>Smart Contract</h2>
+            </div>
+            <div class="card-back">
+              <p>Contrato autoejecutable que se ejecuta en una blockchain cuando se cumplen ciertas condiciones.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 7: DeFi -->
+        <div class="glossary-card" data-category="web3">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-university card-icon"></i>
+              <h2>DeFi</h2>
+            </div>
+            <div class="card-back">
+              <p>Sistema financiero alternativo construido sobre blockchains, sin intermediarios tradicionales.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 8: DAO -->
+        <div class="glossary-card" data-category="web3">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-users card-icon"></i>
+              <h2>DAO</h2>
+            </div>
+            <div class="card-back">
+              <p>Organización Autónoma Descentralizada gobernada por smart contracts y votación comunitaria.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 9: Oracle -->
+        <div class="glossary-card" data-category="blockchain">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-database card-icon"></i>
+              <h2>Oracle</h2>
+            </div>
+            <div class="card-back">
+              <p>Puente que conecta blockchains con datos del mundo real para alimentar smart contracts.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 10: Stablecoin -->
+        <div class="glossary-card" data-category="tokens">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-dollar-sign card-icon"></i>
+              <h2>Stablecoin</h2>
+            </div>
+            <div class="card-back">
+              <p>Criptomoneda diseñada para mantener un valor estable, vinculada a monedas como el dólar (ej. USDT, USDC).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Sección "Explora en Profundidad" -->
+      <section class="featured-concepts">
+        <h2>Explora en Profundidad</h2>
+        <div class="concept-accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <i class="fas fa-link"></i>
+              ¿Cómo realmente funciona Blockchain?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <p>Blockchain es una tecnología de registro distribuido que mantiene una lista creciente de registros (bloques) vinculados mediante criptografía. Cada bloque contiene:</p>
+              <ul>
+                <li>Timestamp del momento de creación</li>
+                <li>Hash criptográfico del bloque anterior</li>
+                <li>Datos de las transacciones</li>
+              </ul>
+              <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SSo_EIwHSd4" title="Blockchain explicado" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+    
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <i class="fas fa-file-contract"></i>
+              Smart Contracts en Acción
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <div class="use-cases">
+                <div class="case-study">
+                  <h3>Ejemplo Práctico: Seguros Automatizados</h3>
+                  <p>Las aseguradoras como Etherisc usan smart contracts para pagos automáticos de indemnizaciones por vuelos cancelados, verificando automáticamente los datos de vuelo a través de oráculos.</p>
+                </div>
+                <div class="interactive-diagram">
+                  <div class="diagram-step">
+                    <span>1. Usuario compra seguro</span>
+                    <div class="arrow"></div>
+                  </div>
+                  <div class="diagram-step">
+                    <span>2. Oracle verifica evento</span>
+                    <div class="arrow"></div>
+                  </div>
+                  <div class="diagram-step">
+                    <span>3. Pago automático si se cumple condición</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <i class="fas fa-rocket"></i>
+              Layer 2: Soluciones de Escalabilidad
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <div class="comparison-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Solución</th>
+                      <th>Velocidad (TPS)</th>
+                      <th>Costo Promedio</th>
+                      <th>Proyectos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Lightning Network</td>
+                      <td>1,000,000</td>
+                      <td>$0.0001</td>
+                      <td>Bitcoin</td>
+                    </tr>
+                    <tr>
+                      <td>Optimistic Rollups</td>
+                      <td>2,000</td>
+                      <td>$0.05</td>
+                      <td>Arbitrum, Optimism</td>
+                    </tr>
+                    <tr>
+                      <td>zk-Rollups</td>
+                      <td>20,000</td>
+                      <td>$0.01</td>
+                      <td>zkSync, Polygon Hermez</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+    
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <i class="fas fa-shield-alt"></i>
+              Seguridad en DeFi
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <div class="security-checklist">
+                <h3>Checklist de Seguridad</h3>
+                <div class="check-item">
+                  <input type="checkbox" id="audit">
+                  <label for="audit">Contrato auditado por terceros</label>
+                </div>
+                <div class="check-item">
+                  <input type="checkbox" id="liquidity">
+                  <label for="liquidity">Liquidez bloqueada por al menos 1 año</label>
+                </div>
+                <div class="check-item">
+                  <input type="checkbox" id="multisig">
+                  <label for="multisig">Wallet multisig para gestión de fondos</label>
+                </div>
+                <div class="check-item">
+                  <input type="checkbox" id="team">
+                  <label for="team">Equipo verificado y transparente</label>
+                </div>
+                <button class="simulate-hack">Simular Ataque</button>
+                <div class="hack-result"></div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Principales Criptomonedas -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <i class="fas fa-coins"></i>
+              Principales Criptomonedas
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <p>Conoce las criptomonedas más relevantes y su propósito:</p>
+              <ul>
+                <li><strong>Bitcoin (BTC)</strong>: La primera criptomoneda, conocida como "oro digital" por su valor como reserva.</li>
+                <li><strong>Ethereum (ETH)</strong>: Base para aplicaciones descentralizadas y smart contracts.</li>
+                <li><strong>Stablecoins</strong>: Mantienen un valor estable, ideal para transacciones sin volatilidad (ej. USDT, USDC).</li>
+              </ul>
+            </div>
+          </div>
+    
+          <!-- Almacenamiento de Criptomonedas -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <i class="fas fa-wallet"></i>
+              Almacenamiento de Criptomonedas
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <p>Las criptomonedas se guardan en wallets, que pueden ser:</p>
+              <ul>
+                <li><strong>Wallets Calientes (Online)</strong>: Conectadas a internet, prácticas pero menos seguras.</li>
+                <li><strong>Wallets Frías (Offline)</strong>: Dispositivos físicos o papel, más seguras pero menos accesibles.</li>
+                <li><strong>Claves Privadas</strong>: Nunca las compartas; son tu acceso a los fondos.</li>
+                <li><strong>Seed Phrase</strong>: Guárdala offline para recuperar tu wallet.</li>
+              </ul>
+            </div>
+          </div>
+    
+          <!-- Volatilidad y Riesgos -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <i class="fas fa-chart-line"></i>
+              Volatilidad y Riesgos
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <p><strong>Volatilidad</strong>: Los precios cambian rápido por oferta, demanda y noticias.</p>
+              <p><strong>Riesgos</strong>: Sin garantías como en bancos, las pérdidas pueden ser totales. Evalúa antes de invertir.</p>
+            </div>
+          </div>
+    
+          <!-- Regulación y Aspectos Legales -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <i class="fas fa-gavel"></i>
+              Regulación y Aspectos Legales
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <p>En Argentina y Brasil, las criptomonedas están reguladas de la siguiente manera:</p>
+              <ul>
+                <li><strong>Argentina</strong>: Las criptomonedas son legales, pero deben declararse en el impuesto a las ganancias. Las exchanges deben registrarse ante la UIF (Unidad de Información Financiera) para cumplir con normativas antilavado.</li>
+                <li><strong>Brasil</strong>: Las criptomonedas son legales y se consideran activos financieros. Los usuarios deben declarar sus tenencias y pagar impuestos sobre las ganancias. Las exchanges deben seguir las regulaciones de la Receita Federal y el Banco Central.</li>
+                <li><strong>KYC/AML</strong>: En ambos países, las exchanges exigen identificación para prevenir fraudes y cumplir con las normativas locales.</li>
+              </ul>
+            </div>
+          </div>
+    
+          <!-- Tendencias Actuales -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <i class="fas fa-chart-bar"></i>
+              Tendencias Actuales
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <p><strong>Pagos</strong>: Creciente uso de criptomonedas en transacciones internacionales.</p>
+              <p><strong>NFTs</strong>: Auge en arte digital, gaming y coleccionables.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="super-container font-poppin">
+        <div class="components-outer-container">
+          <div class="footer-container">
+            <div class="first">
+              <div class="top">
+                <img id="footerLogo" src="images/logo.webp" alt="Footer Logo">
+              </div>
+              <div class="bottom">
+                <p class="text-white">
+                  CX Crypto Lab es una plataforma creada para capacitar al equipo de CX en blockchain, 
+                  criptomonedas, Web3 y el universo cripto en general.
+                </p>
+              </div>
+            </div>
+            <div class="third">
+              <div class="top">
+                <p class="text-white">Creado con ❤️ por William</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="industria.js"></script>
+  </body>
+  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/10/21/19/20241021190125-9JVJJLMU.js"></script>
+</html>

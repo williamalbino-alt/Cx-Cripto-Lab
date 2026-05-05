@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/universal.css" />
+    <link rel="stylesheet" href="styles/colors.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/jogos.css" /> <!-- Certifique-se de que este arquivo existe -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <title>Juegos - CX Crypto Lab</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script>
+      // Verifica o tema armazenado no localStorage ao carregar a página
+      (function () {
+        if (localStorage.getItem("theme") === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body class="light">
+    <header>
+      <nav style="position: fixed; top: 0; width: 100%;">
+        <div class="nav-bar">
+          <li class="logo">
+            <a href="index.html">
+              <img id="topLogo" src="images/logo.webp" alt="CX Crypto Lab Logo" />
+            </a>
+          </li>
+
+          <div class="icon-theme-container">
+            <img src="images/moon.png" alt="Modo Escuro" class="icon-theme" id="theme-icon" />
+          </div>
+
+          <div style="display: flex;">
+            <input type="checkbox" id="check" />
+            <span class="menu font-sans">
+              <li>
+                <a class="text-white" href="https://drive.google.com/drive/folders/0AGa2Eb7GjLLiUk9PVA?hl=es" target="_blank" rel="noopener noreferrer">Encuentros</a>
+              </li>
+              <li>
+                <a class="text-white" href="preguntas.html" rel="noopener noreferrer">Preguntas</a>
+              </li>
+              <li>
+                <a class="text-white" href="cuestionario.html" rel="noopener noreferrer">Cuestionario</a>
+              </li>
+              <li>
+                <a href="noticias.html"><button class="btn-design text-bold">Novedades</button></a>
+              </li>
+              <label for="check" class="close-menu">
+                <i class="text-white fas fa-times"></i>
+              </label>
+            </span>
+          </div>
+
+          <label for="check" class="open-menu">
+            <i class="text-white fas fa-bars"></i>
+          </label>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="games-section">
+        <h1 class="games-title font-sans text-bold text-center">🎮 Juegos Interactivos</h1>
+        <p class="games-subtitle font-poppin text-center">¡Aprende sobre cripto jugando de forma divertida y educativa!</p>
+
+        <div class="games-grid">
+          <!-- Juego 1: Quiz Interactivo -->
+          <div class="game-card" data-game="quiz">
+            <div class="game-icon">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <h2>Quiz Cripto</h2>
+            <p>Testea tus conocimientos con 30 preguntas de diferentes niveles</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 0%"></div>
+            </div>
+            <button class="game-btn" data-action="iframe" type="button">Comenzar Quiz</button>
+<button class="game-btn" data-action="new-tab" type="button">Abrir en nueva pestaña</button>
+          </div>
+
+          <!-- Juego 2: Simulador Blockchain -->
+          <div class="game-card" data-game="blockchain">
+            <div class="game-icon">
+              <i class="fas fa-cube"></i>
+            </div>
+            <h2>Simulador Blockchain</h2>
+            <p>Demostración interactiva de la tecnología blockchain</p>
+            <button class="game-btn" data-action="iframe" type="button">Abrir Simulador</button>
+          </div>
+
+          <!-- Juego 3: CryptoZombies -->
+          <div class="game-card" data-game="cryptozombies">
+            <div class="game-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h2>CryptoZombies</h2>
+            <p>Aprende a programar contratos inteligentes en Solidity</p>
+            <button class="game-btn" data-action="iframe" type="button">Iniciar Curso</button>
+          </div>
+
+          <!-- Juego 4: Memoria Cripto -->
+          <div class="game-card" data-game="memoria">
+            <div class="game-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h2>Memoria Cripto</h2>
+            <p>Empareja términos con sus definiciones</p>
+            <button class="game-btn" data-action="iframe" type="button">Comenzar Juego</button>
+<button class="game-btn" data-action="new-tab" type="button">Abrir en nueva pestaña</button>
+          </div>
+        </div>
+
+        <div class="game-modal">
+          <div class="modal-content">
+              <span class="close-btn">×</span>
+              <div class="game-iframe-container">
+                  <iframe src="" frameborder="0"></iframe>
+              </div>
+              <button class="open-new-tab">Abrir en nueva pestaña</button>
+          </div>
+      </div>
+      <!-- Seção Curiosidades -->
+<!-- Dentro do <main>, após a seção de jogos -->
+  <section class="curiosidades-section">
+    <div class="curiosidades-intro">
+      <h2 class="font-sans text-bold">🌐 Juegos Blockchain: La Nueva Frontera</h2>
+      <p class="font-poppin">Descubre cómo los juegos cripto están revolucionando la industria del gaming mediante:</p>
+      <ul class="curiosidades-list font-poppin">
+        <li><i class="fas fa-coins"></i> Propiedad real de activos digitales</li>
+        <li><i class="fas fa-exchange-alt"></i> Economías jugador a jugador</li>
+        <li><i class="fas fa-shield-alt"></i> Transparencia blockchain</li>
+      </ul>
+    </div>
+  
+    <button class="curiosidades-toggle">
+      <i class="fas fa-play-circle"></i>
+      Ver Videos Explicativos
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    
+    <div class="curiosidades-content">
+      <!-- Vídeo 1 -->
+<div class="curiosidade-video video-container" data-video="https://www.youtube.com/embed/x4Aglp7ue5k">
+  <div class="video-header">
+    <i class="fab fa-youtube"></i>
+    <h3>¿Que són y cómo funcionan los juegos en web3?</h3>
+  </div>
+  <iframe 
+    src="https://www.youtube.com/embed/x4Aglp7ue5k" 
+    loading="lazy"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- Vídeo 2 -->
+<div class="curiosidade-video video-container" data-video="https://www.youtube.com/embed/QLlB4-ZXZXw">
+  <div class="video-header">
+    <i class="fab fa-youtube"></i>
+    <h3>Ejemplo de juegos</h3>
+  </div>
+  <iframe 
+    src="https://www.youtube.com/embed/QLlB4-ZXZXw" 
+    loading="lazy"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+    </div>
+  </section>
+    </main>
+
+    <footer>
+      <div class="super-container font-poppin">
+        <div class="components-outer-container">
+          <div class="footer-container">
+            <div class="first">
+              <div class="top">
+                <img id="footerLogo" src="images/logo.webp" alt="Footer Logo">
+              </div>
+              <div class="bottom">
+                <p class="text-white">
+                  CX Crypto Lab es una plataforma creada para capacitar al equipo de CX en blockchain, 
+                  criptomonedas, Web3 y el universo cripto en general.
+                </p>
+              </div>
+            </div>
+            <div class="third">
+              <div class="top">
+                <p class="text-white">Creado con ❤️ por William</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts incluídos no final do body -->
+    <script src="script.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/10/21/19/20241021190125-9JVJJLMU.js"></script>
+  
+  </body>
+</html>

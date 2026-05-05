@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memória Cripto</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <h1>🔗 Juego de Memória Cripto 💎</h1>
+        <p>🔍 Encontre los pares de símbolos y nombres de las criptomonedas!</p>
+        
+        <div class="stats">
+            <p>🎯 Intentos: <span id="moves">0</span></p>
+            <p>✅ Pares encontrados: <span id="matches">0</span></p>
+        </div>
+
+        <div id="game-board"></div>
+
+        <div id="game-over" class="hidden">
+            <h2>🎉 Felicitaciones! Has ganado! 🚀</h2>
+            <button id="restart">🔄 Jogar novamente</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
