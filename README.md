@@ -6,7 +6,13 @@ Plataforma de capacitación especializada en blockchain, criptomonedas y Web3 pa
 
 **CX Crypto Lab** es una plataforma interactiva diseñada para capacitar al equipo de CX de Ripio en conceptos fundamentales de blockchain, criptomonedas, finanzas descentralizadas (DeFi) y el ecosistema Web3. A través de videos, herramientas interactivas, juegos educativos y cuestionarios, los usuarios mejoran su conocimiento para ofrecer un soporte más especializado y eficiente.
 
-## 🎯 Objetivos Principales
+## � Acceso Rápido
+
+**[🔗 Visita la Plataforma en Vivo](https://cxcriptolab.netlify.app/)**
+
+Accede directamente a CX Crypto Lab y comienza tu capacitación en blockchain y criptomonedas.
+
+## �🎯 Objetivos Principales
 
 1. **Comprender la tecnología detrás de las criptomonedas**
    - Capacitar al equipo de CX en blockchain, smart contracts y el ecosistema cripto
