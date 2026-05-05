@@ -133,7 +133,7 @@ Módulo completo de preguntas interactivas con sistema de puntuación.
 
 ## 👨‍💻 Autor
 
-Creado con ❤️ por **William**
+Creado con por **William Albino**
 
 Parte del iniciativa de capacitación interna de Ripio para el equipo de Customer Experience (CX).
 
@@ -147,4 +147,4 @@ Para sugerencias, mejoras o reporte de errores, por favor contacta al equipo de 
 
 ---
 
-**CX Crypto Lab** - _Donde tu barrio cobra vida con conocimiento crypto_ 🌍💡
+**CX Crypto Lab** - _Pontencializando el conocimiento cripto en Cx_ 🌍💡
